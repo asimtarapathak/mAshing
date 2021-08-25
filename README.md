@@ -9,7 +9,7 @@
 - Hashing and Hash Cracking
 - Password Manager
 - Steganography
-<br>
+
 ### This project is useful for:
 
 - Cyber Forensic students
