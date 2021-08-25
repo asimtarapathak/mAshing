@@ -1,15 +1,15 @@
 # mAshing
 ---
-## mAshing is a Cryptography GUI tool developed in python and pyqt5 by Asim Tara Pathak.
+##mAshing is a Cryptography GUI tool developed in python and pyqt5 by Asim Tara Pathak.
 <br>
-## Features of mAshing:
+##Features of mAshing:
 - Encoding and Decoding message along with files
 - Checksum
 - Hashing and Hash Cracking
 - Password Manager
 - Steganography
 <br>
-## This project is useful for:
+##This project is useful for:
 - Cyber Forensic students
 - Cryptography algorithms
 - Research Scholar
