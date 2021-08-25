@@ -1,0 +1,7 @@
+cryptography
+stepic
+image
+pyperclip
+PyQt5
+pyqt5-tools
+PyQt5Designer

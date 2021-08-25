@@ -1,0 +1,2287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>981</width>
+    <height>684</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>161</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>HOME</string>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>-10</y>
+      <width>791</width>
+      <height>691</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Home</string>
+     </attribute>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>50</y>
+        <width>271</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>36</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+        <underline>false</underline>
+       </font>
+      </property>
+      <property name="text">
+       <string>mAshing</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>140</y>
+        <width>711</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;mAshing&lt;/span&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt; is a Cryptography tool developed using python and pyqt5 by Asim Tara Pathak.&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;Following are the features of mAshing:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>330</y>
+        <width>551</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;-&amp;gt; Encoding and Decoding message along with files&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;-&amp;gt; Hash Integrity Checksum&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;-&amp;gt; Hashing and hash cracking&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;-&amp;gt; Password Manager&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;-&amp;gt; Steganography&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Encoding</string>
+     </attribute>
+     <widget class="QComboBox" name="comboBox_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>220</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <item>
+       <property name="text">
+        <string>Encoding Type</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>base16</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>base32</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>base64</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>base85</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>a85</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>standard_base64</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>urlsafe_base64</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="pushButton_7">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>220</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Encode</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_5">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>160</y>
+        <width>501</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Enter/Browse text File</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="textBrowser_4">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>220</y>
+        <width>471</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Decoded message will appear here</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>160</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>File name:</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_3">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>260</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <item>
+       <property name="text">
+        <string>Select Encoding</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ascii</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>big5</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>big5hkscs</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp037</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp273</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp424</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp437</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp500</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp720</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp737</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp775</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp850</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp852</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp855</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp856</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp857</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp858</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp860</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp861</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp862</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp863</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp864</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp865</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp866</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp869</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp874</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp875</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp932</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp949</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp950</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp1006</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp1026</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp1125</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp1140</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp1250</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp1251</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp1252</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp1253</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp1254</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp1255</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp1256</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp1257</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp1258</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cp65001</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>euc_jp</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>euc_jis_2004</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>euc_jisx0213</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>euc_kr</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>gb2312</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>gbk</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>gb18030</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>hz</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>iso2022_jp</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>iso2022_jp_1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>iso2022_jp_2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>iso2022_jp_2004</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>iso2022_jp_3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>iso2022_jp_ext</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>iso2022_kr</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>latin_1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>iso8859_2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>iso8859_3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>iso8859_4</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>iso8859_5</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>iso8859_6</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>iso8859_7</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>iso8859_8</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>iso8859_9</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>iso8859_10</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>iso8859_11</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>iso8859_13</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>iso8859_14</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>iso8859_15</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>iso8859_16</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>johab</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>koi8_r</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>koi8_t</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>koi8_u</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>kz1048</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>mac_cyrillic</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>mac_greek</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>mac_iceland</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>mac_latin2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>mac_roman</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>mac_turkish</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ptcp154</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>shift_jis</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>shift_jis_2004</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>shift_jisx0213</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>utf_32</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>utf_32_be</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>utf_32_le</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>utf_16</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>utf_16_be</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>utf_16_le</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>utf_7</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>utf_8</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>utf_8_sig</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="pushButton_8">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>160</y>
+        <width>51</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>....</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_9">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>270</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Decode</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>160</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>17</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>File</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Message:</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>30</y>
+        <width>651</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Enter message to encode</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>460</y>
+        <width>761</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Use:&lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt; For message encoding/decoding , enter message or encoded text in msg box then select encode type and encoding then click encode/decode. For encoding/decoding text file, click the check mark, browse the file then perform encode/decode. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Note: &lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;For file encoding/decoding, encoding type and encoding is not necessary, it can be left blank.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>Checksum</string>
+     </attribute>
+     <widget class="QPushButton" name="pushButton_10">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>250</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Generate HASH</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="textBrowser_3">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>250</y>
+        <width>601</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Digested Hash wil be here</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_11">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>310</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Checksum</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_6">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>140</y>
+        <width>611</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Enter/Browse File</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>140</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>File name:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_12">
+      <property name="geometry">
+       <rect>
+        <x>730</x>
+        <y>140</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>....</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>450</y>
+        <width>761</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Use:&lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt; Enter Hash Value, then browse the file then select hash type and hash digest type after that click on generate hash to generate the hash for the broswed file then click on checksum for file integrity checksum.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_4">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>50</y>
+        <width>681</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Enter Hash Value for Check Sum</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_15">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>61</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Hash:</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_5">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>200</y>
+        <width>201</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <item>
+       <property name="text">
+        <string>Select  digest Type</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Hex String</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Byte Value</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="comboBox_6">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>200</y>
+        <width>221</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <item>
+       <property name="text">
+        <string>Select HASH</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>sha3_256</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>sha</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SHA224</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SHA</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>sha3_224</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>sha256</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>md4</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>dsaWithSHA</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SHA512</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ripemd160</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>sha3_512</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>md5</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SHA384</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SHA256</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>sha3_384</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>whirlpool</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SHA1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>DSA-SHA</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>sha512</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>DSA</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>blake2b</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RIPEMD160</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>MD4</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>dsaEncryption</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>sha384</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>MD5</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ecdsa-with-SHA1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>sha224</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>blake2s</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>sha1</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_19">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>200</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Select HASH Algorithm:</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_4">
+     <attribute name="title">
+      <string>Hashing</string>
+     </attribute>
+     <widget class="QPushButton" name="pushButton_13">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>430</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>HASH Crack</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_2">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>150</y>
+        <width>201</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <item>
+       <property name="text">
+        <string>Select  digest Type</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Hex String</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Byte Value</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>150</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Select HASH Algorithm:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_14">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>230</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Generate HASH</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>380</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Wordlist:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_3">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>380</y>
+        <width>611</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Enter/Browse Wordlist File</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="textBrowser_2">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>430</y>
+        <width>601</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Decoded Message will be here if it matched with wordlist</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>40</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Message:</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>150</y>
+        <width>221</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <item>
+       <property name="text">
+        <string>Select HASH</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>sha3_256</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>sha</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SHA224</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SHA</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>sha3_224</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>sha256</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>md4</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>dsaWithSHA</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SHA512</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ripemd160</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>sha3_512</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>md5</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SHA384</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SHA256</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>sha3_384</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>whirlpool</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SHA1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>DSA-SHA</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>sha512</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>DSA</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>blake2b</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RIPEMD160</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>MD4</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>dsaEncryption</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>sha384</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>MD5</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ecdsa-with-SHA1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>sha224</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>blake2s</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>sha1</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="Line" name="line">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>200</y>
+        <width>771</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_15">
+      <property name="geometry">
+       <rect>
+        <x>730</x>
+        <y>380</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>....</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_2">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>30</y>
+        <width>651</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Enter Hash Value/Text String/Hex Value</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="textBrowser">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>230</y>
+        <width>601</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Digested Message wil be here</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>350</y>
+        <width>771</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_16">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>550</y>
+        <width>761</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Use: &lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;For hashing, enter message, select HASH then select hash digest type then generate the hash value. For hash cracking, enter hash value , select HASH and digest type then browse a wordlist file then click on HASH Crack, wait for some moment then the cracked HASH wil be visible.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_5">
+     <attribute name="title">
+      <string>Password Manager</string>
+     </attribute>
+     <widget class="QTextBrowser" name="textBrowser_5">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>340</y>
+        <width>581</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>MS Shell Dlg 2</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Decrypted Password will be here</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_4">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>120</y>
+        <width>551</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Enter password or Generate it</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_2">
+      <property name="geometry">
+       <rect>
+        <x>172</x>
+        <y>290</y>
+        <width>581</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>MS Shell Dlg 2</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Enter File Name to encrypt/decrypt</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBox">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>60</y>
+        <width>201</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>341</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>MS Shell Dlg 2</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Length of Password to be generated:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_19">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>120</y>
+        <width>181</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Generate Password</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_22">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>170</y>
+        <width>181</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Copy to Clipboard</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_20">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>230</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Generate Key</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_23">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>230</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Load Key</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="textBrowser_6">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>230</y>
+        <width>431</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Generated/Loaded key will appear hear</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_21">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>290</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Encrypt</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_24">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>340</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Decrypt</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_17">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>480</y>
+        <width>761</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Use: &lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;For generating password, increase the password length and click in generate. Else you can type password as your choice. For encryption, First key is needed so click in Genetare Key then save it after that load the key. Then click on Encrypt to encrypt the pasword and save it. For decryption, a existing key is needed so load the key then click on Decrypt then select the encrypted password file, if key is correct then decrypted key will be visible. Also, generated password can be copied to clipboard using Copy to Clipboard button.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_6">
+     <attribute name="title">
+      <string>Stegnography</string>
+     </attribute>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Message:</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_3">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>40</y>
+        <width>651</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Enter message to encode in image</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_25">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>160</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Browse Img</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="textBrowser_7">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>160</y>
+        <width>591</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>MS Shell Dlg 2</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Broswed Img name will appear here</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="textBrowser_8">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>220</y>
+        <width>441</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Generated/Loaded key will appear hear</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_26">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>220</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Load Key</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_27">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>220</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Generate Key</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_16">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>290</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Encode</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="textBrowser_9">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>290</y>
+        <width>621</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Decoded Message will appear here</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_17">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>340</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Decode</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_18">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>480</y>
+        <width>761</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Use: &lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;For encoding message,&lt;/span&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;/&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Enter message in msg box then browse the image file. Then if you want to securely encode msg using encryption then you need to generate the key and load it  else you can ignore this encryption part if you don't want secure encoding. Then click on encode. For decoding message, Browse the image file then if the image file is encrypted then load the key else ignore the key part and click on decode then the decoded msg will be visible. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>120</y>
+      <width>161</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Encoding
+Decoding</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>230</y>
+      <width>161</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+      <kerning>true</kerning>
+     </font>
+    </property>
+    <property name="text">
+     <string>HASH 
+Checksum</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>340</y>
+      <width>161</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+      <kerning>true</kerning>
+     </font>
+    </property>
+    <property name="text">
+     <string>Hashing/
+Cracking</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_5">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>460</y>
+      <width>161</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+      <kerning>true</kerning>
+     </font>
+    </property>
+    <property name="text">
+     <string>Password
+Manager</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_6">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>580</y>
+      <width>161</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+      <kerning>true</kerning>
+     </font>
+    </property>
+    <property name="text">
+     <string>Steganography </string>
+    </property>
+   </widget>
+   <widget class="Line" name="line_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>100</y>
+      <width>161</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>210</y>
+      <width>161</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_5">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>320</y>
+      <width>161</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_6">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>440</y>
+      <width>161</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_7">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>560</y>
+      <width>161</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
