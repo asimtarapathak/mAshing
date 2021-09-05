@@ -9,6 +9,7 @@ import string
 from cryptography.fernet import Fernet
 from PIL import Image
 import stepic
+import wave
 
 
 ui,_ = loadUiType("mAshing.ui")  # This will load the main ui file
@@ -471,7 +472,7 @@ class MainApp(QMainWindow,ui):  # Class to create main window
     # methods for steagnography starts here
     # Note: generate_key and load_key methods will be used of Password Manager
     def browse_image(self):
-        image_file = QFileDialog.getOpenFileNames(self, "Select Image File: ", "Select Image file Only","JPG (*.jpg);;JPEG (*.jpeg);;PNG (*.png);;GIF (*.gif);;BMP (*.bmp);;ICO (*.ico) ")
+        image_file = QFileDialog.getOpenFileNames(self, "Select Image/Audio(wav) File: ", "Select Image file Only","JPG (*.jpg);;JPEG (*.jpeg);;PNG (*.png);;GIF (*.gif);;BMP (*.bmp);;ICO (*.ico);;Wave (*.wav) ")
         img_file = image_file[0][0]
         self.textBrowser_7.setText(img_file)
         self.browsed_image = img_file
@@ -494,19 +495,43 @@ class MainApp(QMainWindow,ui):  # Class to create main window
     def encode_image(self):
         self.message = self.textEdit_3.toPlainText()
         if self.message=="" or self.browsed_image=="":
-            QMessageBox.warning(self,"Error!","Message box empty or Image not browsed")
+            QMessageBox.warning(self,"Error!","Message box empty or Image/Audio(wav) not browsed")
         else:
             if self.loaded_key =="":
                 QMessageBox.warning(self, "Warning!", "Key is not loaded. If you proceed further,\nEncoded message will not be encrypted and will be visible easily")
-                try:
-                    original_image = Image.open(self.browsed_image)
-                    encoded_img = stepic.encode(original_image,self.message)
-                    encoded_img_file = QFileDialog.getSaveFileName(self, "Select Image File: ", "encoded_image.png","PNG (*.png);;GIF (*.gif);;BMP (*.bmp);;ICO (*.ico)")
-                    enc_img_file = encoded_img_file[0]
-                    encoded_img.save(enc_img_file)
-                    QMessageBox.about(self, "Image Encoded", "Message encoded successfully in image")
-                except:
-                    QMessageBox.warning(self, "Error", "Oops! problem occured while saving please try again!")
+                if self.browsed_image.endswith(".wav"):
+                    try:
+                        audio_file  = wave.open(self.browsed_image, mode='rb')
+                        frame_bytes = bytearray(list(audio_file.readframes(audio_file.getnframes())))
+                        self.message = self.message + int((len(frame_bytes)-(len(self.message)*8*8))/8) *'#'
+                        bits = list(map(int, ''.join([bin(ord(i)).lstrip('0b').rjust(8,'0') for i in self.message])))
+                        for i, bit in enumerate(bits):
+                            frame_bytes[i] = (frame_bytes[i] & 254) | bit
+
+                        frame_modified = bytes(frame_bytes)
+
+                        encoded_audio_file = QFileDialog.getSaveFileName(self, "Select Audio(wav) File: ", "encoded_audio.wav","Wave (*.wav)")
+                        enc_audio_file = encoded_audio_file[0]
+
+                        with wave.open(enc_audio_file, 'wb') as fd:
+                            fd.setparams(audio_file.getparams())
+                            fd.writeframes(frame_modified)
+                        audio_file.close()
+
+                        QMessageBox.about(self, "Audio Encoded", "Message encoded successfully in Audio File")
+                    except:
+                        QMessageBox.warning(self, "Error", "Oops! problem occured while saving please try again!")
+
+                if self.browsed_image.endswith(".jpg") or self.browsed_image.endswith(".jpeg") or self.browsed_image.endswith(".png") or self.browsed_image.endswith(".gif") or self.browsed_image.endswith(".bmp") or self.browsed_image.endswith(".ico"):
+                    try:
+                        original_image = Image.open(self.browsed_image)
+                        encoded_img = stepic.encode(original_image,self.message)
+                        encoded_img_file = QFileDialog.getSaveFileName(self, "Select Image File: ", "encoded_image.png","PNG (*.png);;GIF (*.gif);;BMP (*.bmp);;ICO (*.ico)")
+                        enc_img_file = encoded_img_file[0]
+                        encoded_img.save(enc_img_file)
+                        QMessageBox.about(self, "Image Encoded", "Message encoded successfully in image")
+                    except:
+                        QMessageBox.warning(self, "Error", "Oops! problem occured while saving please try again!")
 
             else:
                 try:
@@ -530,13 +555,22 @@ class MainApp(QMainWindow,ui):  # Class to create main window
             else:
                 if self.loaded_key == "":
                     QMessageBox.warning(self, "Warning!","Key is not loaded. If you proceed further,\nif encoded message is encrypted then, only encrypted message will be visible")
-                    try:
-                        encoded_img = Image.open(self.browsed_image)
-                        decoded_img = stepic.decode(encoded_img)
-                        self.textBrowser_9.setText(decoded_img)
-                        QMessageBox.about(self, "Image Decoded", "Message decoded successfully from image")
-                    except:
-                        QMessageBox.warning(self, "Error", "Oops! problem occured while decoding please try again!")
+                    if self.browsed_image.endswith(".wav"):
+                        audio_file = wave.open(self.browsed_image, mode='rb')
+                        frame_bytes = bytearray(list(audio_file.readframes(audio_file.getnframes())))
+                        extracted_bytes = [frame_bytes[i] & 1 for i in range(len(frame_bytes))]
+                        message = "".join(chr(int("".join(map(str,extracted_bytes[i:i+8])),2)) for i in range(0,len(extracted_bytes),8))
+                        decoded_msg = message.split("###")[0]
+                        self.textBrowser_9.setText(decoded_msg)
+                        QMessageBox.about(self, "Audio Decoded", "Message decoded successfully from Audio File")
+                    else:
+                        try:
+                            encoded_img = Image.open(self.browsed_image)
+                            decoded_img = stepic.decode(encoded_img)
+                            self.textBrowser_9.setText(decoded_img)
+                            QMessageBox.about(self, "Image Decoded", "Message decoded successfully from image")
+                        except:
+                            QMessageBox.warning(self, "Error", "Oops! problem occured while decoding please try again!")
 
                 else:
                     try:

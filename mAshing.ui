@@ -44,7 +44,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>5</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -1959,7 +1959,7 @@
        </font>
       </property>
       <property name="text">
-       <string>Browse Img</string>
+       <string>Browse File</string>
       </property>
      </widget>
      <widget class="QTextBrowser" name="textBrowser_7">
@@ -1978,7 +1978,7 @@
        </font>
       </property>
       <property name="placeholderText">
-       <string>Broswed Img name will appear here</string>
+       <string>Broswed Img/Audio(wav) name will appear here</string>
       </property>
      </widget>
      <widget class="QTextBrowser" name="textBrowser_8">
@@ -2093,13 +2093,13 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>480</y>
+        <y>470</y>
         <width>761</width>
-        <height>141</height>
+        <height>151</height>
        </rect>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Use: &lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;For encoding message,&lt;/span&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;/&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Enter message in msg box then browse the image file. Then if you want to securely encode msg using encryption then you need to generate the key and load it  else you can ignore this encryption part if you don't want secure encoding. Then click on encode. For decoding message, Browse the image file then if the image file is encrypted then load the key else ignore the key part and click on decode then the decoded msg will be visible. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Use: &lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;For encoding message,Enter message in msg box then browse the image file or audio file(wav). Then if you want to securely encode msg using encryption then you need to generate the key and load it else you can ignore this encryption part if you don't want secure encoding. Then click on encode. For decoding message, Browse the image(not jpeg) or audio(wav) file then if the image file is encrypted then load the key else ignore the key part and click on decode then the decoded msg will be visible. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
