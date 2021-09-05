@@ -98,7 +98,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;-&amp;gt; Encoding and Decoding message along with files&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;-&amp;gt; Hash Integrity Checksum&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;-&amp;gt; Hashing and hash cracking&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;-&amp;gt; Password Manager&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;-&amp;gt; Steganography&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;-&amp;gt; Encoding and Decoding message along with files&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;-&amp;gt; Hash Integrity Checksum&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;-&amp;gt; Hashing and hash cracking&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;-&amp;gt; Password Manager&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;-&amp;gt; Secure Steganography&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
     </widget>
@@ -2125,7 +2125,7 @@
     </property>
     <property name="text">
      <string>Encoding
-Decoding</string>
+      Decoding</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_3">
@@ -2146,8 +2146,8 @@ Decoding</string>
      </font>
     </property>
     <property name="text">
-     <string>HASH 
-Checksum</string>
+     <string>HASH
+      Checksum</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_4">
@@ -2168,8 +2168,8 @@ Checksum</string>
      </font>
     </property>
     <property name="text">
-     <string>Hashing/
-Cracking</string>
+     <string>Hashing
+      HashCracking</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_5">
@@ -2191,7 +2191,7 @@ Cracking</string>
     </property>
     <property name="text">
      <string>Password
-Manager</string>
+      Manager</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_6">
@@ -2212,7 +2212,8 @@ Manager</string>
      </font>
     </property>
     <property name="text">
-     <string>Steganography </string>
+     <string>Secure
+      Steganography </string>
     </property>
    </widget>
    <widget class="Line" name="line_3">
