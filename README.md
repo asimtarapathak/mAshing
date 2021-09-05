@@ -48,5 +48,5 @@
 ### Hashes:
 
 | Sha3_256 | Sha | Sha224 | Sha3_224 | Sha256 | Md4 | Md5 | DSAWithSHA | Sha512 | Ripemd160 | ECDSA-With-Sha1 | 
-|---|---|---|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|---|---|---|
 | Sha3_512 | Sha384 | Sha3_384 | Whirlpool | Sha1 | DSA-SHA | DSA | Blake2b | DSA Encryption | Sha224 | Blake2s|
