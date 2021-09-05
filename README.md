@@ -8,7 +8,7 @@
 - Checksum
 - Hashing and Hash Cracking
 - Password Manager
-- Secure Steganography
+- Secure Steganography (Audio(wav) and Image)
 
 ### This project is useful for:
 
