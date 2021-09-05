@@ -50,3 +50,27 @@
 | Sha3_256 | Sha | Sha224 | Sha3_224 | Sha256 | Md4 | Md5 | DSAWithSHA | Sha512 | Ripemd160 | ECDSA-With-Sha1 | 
 |---|---|---|---|---|---|---|---|---|---|---|
 | Sha3_512 | Sha384 | Sha3_384 | Whirlpool | Sha1 | DSA-SHA | DSA | Blake2b | DSA Encryption | Sha224 | Blake2s|
+
+
+## Download and Use mAshing:
+
+**Note**: Python-3 must be installed brfore to run mAshing. 
+```
+Step 1: Download/Clone mAshing from GitHub
+Step 2: Open cmd/terminal and run the command below:
+        pip install -r requirements.txt
+        (If it don't gives any error then you can skip step 3 and can continue from step 4. But if any error occured 
+        while downloading and installing packages then you can type following commands and install packages using step 3)
+Step 3: If step 2 gives error then type following commands in cmd/terminal:
+        pip install cryptography
+        pip install stepic
+        pip install image
+        pip install wave
+        pip install pyperclip
+        pip install pyqt5
+        pip install pyqt5-tools
+Step 4: Now , we are all set. Run main.py file now using following command,
+        python main.py
+```
+
+Enjoy mAshing and you can give your feeback :)
