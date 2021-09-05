@@ -40,3 +40,13 @@
 | iso8859_14 | iso8859_15 | iso8859_16 | johab | koi8_r | koi8_t | koi8_u | kz1048 | mac_cyrillic | mac_geek | mac_iceland | mac_latin2 |
 | mac_roman | mac_turkish | ptcp154 | shift_jis | shift_jis_2004 | shift_jisx0213 | utf_32 | utf_32_be| utf_32_le | utf_16 | utf_16_be | utf_16_le |
 | utf_7 | utf_8 | utf_8_sig |
+
+### Message Digest Type:
+- Hex Value
+- Byte Value
+
+### Hashes:
+
+| Sha3_256 | Sha | Sha224 | Sha3_224 | Sha256 | Md4 | Md5 | DSAWithSHA | Sha512 | Ripemd160 | ECDSA-With-Sha1 | 
+|---|---|---|---|---|---|---|---|---|---|
+| Sha3_512 | Sha384 | Sha3_384 | Whirlpool | Sha1 | DSA-SHA | DSA | Blake2b | DSA Encryption | Sha224 | Blake2s|
