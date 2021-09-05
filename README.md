@@ -8,7 +8,7 @@
 - Checksum
 - Hashing and Hash Cracking
 - Password Manager
-- Steganography
+- Secure Steganography
 
 ### This project is useful for:
 
