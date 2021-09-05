@@ -175,9 +175,12 @@ class MainApp(QMainWindow,ui):  # Class to create main window
 
 
     def browse_wordlist(self):
-        filename = QFileDialog.getOpenFileNames(self, "Select a wordlist file: ", "","Text File (*.txt)")
-        self.file = filename[0][0]
-        self.lineEdit_3.setText(self.file)
+        try:
+            filename = QFileDialog.getOpenFileNames(self, "Select a wordlist file: ", "","Text File (*.txt)")
+            self.file = filename[0][0]
+            self.lineEdit_3.setText(self.file)
+        except:
+            QMessageBox.about(self,"mAshing","File Not Selected")
 
     def crack_hash(self):
         self.message = self.textEdit_2.toPlainText()
@@ -221,9 +224,12 @@ class MainApp(QMainWindow,ui):  # Class to create main window
 
     # methods for hash checksum starts here
     def browse_file_checksum(self):
-        filename = QFileDialog.getOpenFileNames(self, "Select a file: ", "","All File (*.*)")
-        self.file = filename[0][0]
-        self.lineEdit_6.setText(self.file)
+        try:
+            filename = QFileDialog.getOpenFileNames(self, "Select a file: ", "","All File (*.*)")
+            self.file = filename[0][0]
+            self.lineEdit_6.setText(self.file)
+        except:
+            QMessageBox.about(self,"mAshing","File Not Selected")
 
     def hash_checksum(self):
         self.message = self.textEdit_4.toPlainText()
@@ -362,9 +368,12 @@ class MainApp(QMainWindow,ui):  # Class to create main window
             QMessageBox.warning(self, "Data Error", "Encoding type not supported!\nRun Time Error Occured!\nTry other Encoding option")
 
     def browse_file_encodingDecoding(self):
-        filename = QFileDialog.getOpenFileNames(self, "Select a text file: ", "","Text File (*.txt)")
-        self.file = filename[0][0]
-        self.lineEdit_5.setText(self.file)
+        try:
+            filename = QFileDialog.getOpenFileNames(self, "Select a text file: ", "","Text File (*.txt)")
+            self.file = filename[0][0]
+            self.lineEdit_5.setText(self.file)
+        except:
+            QMessageBox.about(self,"mAshing","File Not Selected")
 
     def handle_check(self):
         self.checkBox.toggled.connect(self.file_on)
@@ -472,10 +481,14 @@ class MainApp(QMainWindow,ui):  # Class to create main window
     # methods for steagnography starts here
     # Note: generate_key and load_key methods will be used of Password Manager
     def browse_image(self):
-        image_file = QFileDialog.getOpenFileNames(self, "Select Image/Audio(wav) File: ", "Select Image file Only","JPG (*.jpg);;JPEG (*.jpeg);;PNG (*.png);;GIF (*.gif);;BMP (*.bmp);;ICO (*.ico);;Wave (*.wav) ")
-        img_file = image_file[0][0]
-        self.textBrowser_7.setText(img_file)
-        self.browsed_image = img_file
+        try:
+            image_file = QFileDialog.getOpenFileNames(self, "Select Image/Audio(wav) File: ", "Image/Audio(wav) file Only","JPG (*.jpg);;JPEG (*.jpeg);;PNG (*.png);;GIF (*.gif);;BMP (*.bmp);;ICO (*.ico);;Wave (*.wav) ")
+            img_file = image_file[0][0]
+            self.textBrowser_7.setText(img_file)
+            self.browsed_image = img_file
+        except:
+            QMessageBox.about(self,"mAshing","File Not Selected")
+
 
     def encrypt_message_image(self,message):
         key = self.loaded_key
@@ -534,16 +547,42 @@ class MainApp(QMainWindow,ui):  # Class to create main window
                         QMessageBox.warning(self, "Error", "Oops! problem occured while saving please try again!")
 
             else:
-                try:
-                    self.message = self.encrypt_message_image(self.message)
-                    original_image = Image.open(self.browsed_image)
-                    encoded_img = stepic.encode(original_image,self.message)
-                    encoded_img_file = QFileDialog.getSaveFileName(self, "Select Image File: ", "encoded_image.png","PNG (*.png);;GIF (*.gif);;BMP (*.bmp);;ICO (*.ico)")
-                    enc_img_file = encoded_img_file[0]
-                    encoded_img.save(enc_img_file)
-                    QMessageBox.about(self, "Image Encoded", "Encrypted message encoded successfully in image")
-                except:
-                    QMessageBox.warning(self, "Error", "Oops! problem occured while saving please try again!")
+                if self.browsed_image.endswith(".wav"):
+                    try:
+                        self.message = self.encrypt_message_image(self.message)
+                        self.message = str(self.message)
+                        audio_file = wave.open(self.browsed_image, mode='rb')
+                        frame_bytes = bytearray(list(audio_file.readframes(audio_file.getnframes())))
+                        self.message = self.message + int((len(frame_bytes)-(len(self.message)*8*8))/8) *'#'
+                        bits = list(map(int, ''.join([bin(ord(i)).lstrip('0b').rjust(8,'0') for i in self.message])))
+                        for i, bit in enumerate(bits):
+                            frame_bytes[i] = (frame_bytes[i] & 254) | bit
+
+                        frame_modified = bytes(frame_bytes)
+
+                        encoded_audio_file = QFileDialog.getSaveFileName(self, "Select Audio(wav) File: ", "encoded_audio.wav","Wave (*.wav)")
+                        enc_audio_file = encoded_audio_file[0]
+
+                        with wave.open(enc_audio_file, 'wb') as fd:
+                            fd.setparams(audio_file.getparams())
+                            fd.writeframes(frame_modified)
+                        audio_file.close()
+
+                        QMessageBox.about(self, "Audio Encoded", "Message encoded successfully in Audio File")
+                    except:
+                        QMessageBox.warning(self, "Error", "Oops! problem occured while saving please try again!")
+
+                if self.browsed_image.endswith(".jpg") or self.browsed_image.endswith(".jpeg") or self.browsed_image.endswith(".png") or self.browsed_image.endswith(".gif") or self.browsed_image.endswith(".bmp") or self.browsed_image.endswith(".ico"):
+                    try:
+                        self.message = self.encrypt_message_image(self.message)
+                        original_image = Image.open(self.browsed_image)
+                        encoded_img = stepic.encode(original_image,self.message)
+                        encoded_img_file = QFileDialog.getSaveFileName(self, "Select Image File: ", "encoded_image.png","PNG (*.png);;GIF (*.gif);;BMP (*.bmp);;ICO (*.ico)")
+                        enc_img_file = encoded_img_file[0]
+                        encoded_img.save(enc_img_file)
+                        QMessageBox.about(self, "Image Encoded", "Encrypted message encoded successfully in image")
+                    except:
+                        QMessageBox.warning(self, "Error", "Oops! problem occured while saving please try again!")
 
 
     def decode_image(self):
@@ -556,13 +595,17 @@ class MainApp(QMainWindow,ui):  # Class to create main window
                 if self.loaded_key == "":
                     QMessageBox.warning(self, "Warning!","Key is not loaded. If you proceed further,\nif encoded message is encrypted then, only encrypted message will be visible")
                     if self.browsed_image.endswith(".wav"):
-                        audio_file = wave.open(self.browsed_image, mode='rb')
-                        frame_bytes = bytearray(list(audio_file.readframes(audio_file.getnframes())))
-                        extracted_bytes = [frame_bytes[i] & 1 for i in range(len(frame_bytes))]
-                        message = "".join(chr(int("".join(map(str,extracted_bytes[i:i+8])),2)) for i in range(0,len(extracted_bytes),8))
-                        decoded_msg = message.split("###")[0]
-                        self.textBrowser_9.setText(decoded_msg)
-                        QMessageBox.about(self, "Audio Decoded", "Message decoded successfully from Audio File")
+                        try:
+                            audio_file = wave.open(self.browsed_image, mode='rb')
+                            frame_bytes = bytearray(list(audio_file.readframes(audio_file.getnframes())))
+                            extracted_bytes = [frame_bytes[i] & 1 for i in range(len(frame_bytes))]
+                            message = "".join(chr(int("".join(map(str,extracted_bytes[i:i+8])),2)) for i in range(0,len(extracted_bytes),8))
+                            decoded_msg = message.split("###")[0]
+                            self.textBrowser_9.setText(decoded_msg)
+                            QMessageBox.about(self, "Audio Decoded", "Message decoded successfully from Audio File")
+                        except:
+                            QMessageBox.warning(self, "Error", "Oops! problem occured while decoding please try again!")
+
                     else:
                         try:
                             encoded_img = Image.open(self.browsed_image)
@@ -573,13 +616,31 @@ class MainApp(QMainWindow,ui):  # Class to create main window
                             QMessageBox.warning(self, "Error", "Oops! problem occured while decoding please try again!")
 
                 else:
-                    try:
-                        encoded_img = Image.open(self.browsed_image)
-                        decoded_img = stepic.decode(encoded_img)
-                        self.decrypt_message_image(bytes(decoded_img, encoding="utf-8"))
-                        QMessageBox.about(self, "Image Decoded", "Message decoded successfully from image")
-                    except:
-                        QMessageBox.warning(self, "Error", "Oops! problem occured while decoding please try again!")
+                    if self.browsed_image.endswith(".wav"):
+                        try:
+                            audio_file = wave.open(self.browsed_image, mode='rb')
+                            frame_bytes = bytearray(list(audio_file.readframes(audio_file.getnframes())))
+                            extracted_bytes = [frame_bytes[i] & 1 for i in range(len(frame_bytes))]
+                            message = "".join(chr(int("".join(map(str,extracted_bytes[i:i+8])),2)) for i in range(0,len(extracted_bytes),8))
+                            decoded_msg = message.split("###")[0]
+
+                            decoded_msg = decoded_msg[2:-1]
+                            decoded_msg = bytes(decoded_msg,encoding="utf-8")
+                            decoded_msg = self.decrypt_message_image(decoded_msg)
+
+                            # self.textBrowser_9.setText(decoded_msg)
+                            QMessageBox.about(self, "Audio Decoded", "Message decoded successfully from Audio File")
+                        except:
+                            QMessageBox.warning(self, "Error", "Oops! problem occured while decoding please try again!")
+
+                    else:
+                        try:
+                            encoded_img = Image.open(self.browsed_image)
+                            decoded_img = stepic.decode(encoded_img)
+                            self.decrypt_message_image(bytes(decoded_img, encoding="utf-8"))
+                            QMessageBox.about(self, "Image Decoded", "Message decoded successfully from image")
+                        except:
+                            QMessageBox.warning(self, "Error", "Oops! problem occured while decoding please try again!")
 
     # methods for steagnography ends here
 
