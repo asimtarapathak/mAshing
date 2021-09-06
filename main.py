@@ -138,40 +138,71 @@ class MainApp(QMainWindow,ui):  # Class to create main window
 
 
     def digest_hash(self,message,hash_name,digest_type):
-
-        hashObj = new(hash_name)
-        if digest_type == "Hex String":
-            hashObj.update(message.encode())
-            self.textBrowser.setText(hashObj.hexdigest())
+        if hash_name == "NTLM":
+            if digest_type == "Hex String":
+                hashObj = new('md4',message.encode('utf-16le')).hexdigest()
+                self.textBrowser.setText(hashObj)
+            else:
+                hashObj = new('md4',message.encode('utf-16le')).hexdigest()
+                self.textBrowser.setText(str(hashObj))
         else:
-            hashObj.update(message.encode())
-            self.textBrowser.setText(str(hashObj.digest()))
+            hashObj = new(hash_name)
+            if digest_type == "Hex String":
+                hashObj.update(message.encode())
+                self.textBrowser.setText(hashObj.hexdigest())
+            else:
+                hashObj.update(message.encode())
+                self.textBrowser.setText(str(hashObj.digest()))
 
 
 
     def digest_file_hash(self,file_name,hash_name,digest_type):
 
-        hashObj = new(hash_name)
+        if hash_name == "NTLM":
+            hashObj = new('md4')
 
-        try:
-            with open(file_name,"rb") as file:
-                chunk = 0
-                if digest_type == "Hex String":
-                    while chunk != b'':
-                        chunk = file.read(2048)
-                        hashObj.update(chunk)
-                    self.textBrowser_3.setText(hashObj.hexdigest())
-                    self.file_hash_checksum_value = hashObj.hexdigest()
-                else:
-                    while chunk != b'':
-                        chunk = file.read(2048)
-                        hashObj.update(chunk)
-                    self.textBrowser_3.setText(str(hashObj.digest()))
-                    self.file_hash_checksum_value = str(hashObj.digest())
-        except FileNotFoundError:
-            QMessageBox.warning(self, "File Error","File Not Found!")
-        except:
-            QMessageBox.warning(self, "Error!", "File choosing operation was cancled")
+            try:
+                with open(file_name,"rb") as file:
+                    chunk = 0
+                    if digest_type == "Hex String":
+                        while chunk != b'':
+                            chunk = file.read(2048)
+                            hashObj.update(chunk.encode('utf-16le'))
+                        self.textBrowser_3.setText(hashObj.hexdigest())
+                        self.file_hash_checksum_value = hashObj.hexdigest()
+                    else:
+                        while chunk != b'':
+                            chunk = file.read(2048)
+                            hashObj.update(chunk.encode('utf-16le'))
+                        self.textBrowser_3.setText(str(hashObj.digest()))
+                        self.file_hash_checksum_value = str(hashObj.digest())
+            except FileNotFoundError:
+                QMessageBox.warning(self, "File Error","File Not Found!")
+            except:
+                QMessageBox.warning(self, "Error!", "File choosing operation was cancled")
+
+        else:
+            hashObj = new(hash_name)
+
+            try:
+                with open(file_name,"rb") as file:
+                    chunk = 0
+                    if digest_type == "Hex String":
+                        while chunk != b'':
+                            chunk = file.read(2048)
+                            hashObj.update(chunk)
+                        self.textBrowser_3.setText(hashObj.hexdigest())
+                        self.file_hash_checksum_value = hashObj.hexdigest()
+                    else:
+                        while chunk != b'':
+                            chunk = file.read(2048)
+                            hashObj.update(chunk)
+                        self.textBrowser_3.setText(str(hashObj.digest()))
+                        self.file_hash_checksum_value = str(hashObj.digest())
+            except FileNotFoundError:
+                QMessageBox.warning(self, "File Error","File Not Found!")
+            except:
+                QMessageBox.warning(self, "Error!", "File choosing operation was cancled")
 
 
     def browse_wordlist(self):
@@ -202,13 +233,23 @@ class MainApp(QMainWindow,ui):  # Class to create main window
         with open(word_list,"rt",errors='ignore') as wordlist:
             for pwd in wordlist:
                 pwd = pwd.strip()
-                hashObj = new(hash_name)
-                if digest_type == "Hex String":
-                    hashObj.update(pwd.encode())
-                    p = hashObj.hexdigest()
+                if hash_name=="NTLM":
+                    hashObj = new('md4')
+                    if digest_type == "Hex String":
+                        hashObj.update(pwd.encode('utf-16le'))
+                        p = hashObj.hexdigest()
+                    else:
+                        hashObj.update(pwd.encode('utf-16le'))
+                        p = hashObj.digest()
+
                 else:
-                    hashObj.update(pwd.encode())
-                    p = hashObj.digest()
+                    hashObj = new(hash_name)
+                    if digest_type == "Hex String":
+                        hashObj.update(pwd.encode())
+                        p = hashObj.hexdigest()
+                    else:
+                        hashObj.update(pwd.encode())
+                        p = hashObj.digest()
 
                 if str(p) == m:
                     self.textBrowser_2.setText(pwd)
