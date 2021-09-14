@@ -6,3 +6,5 @@ PyQt5
 pyqt5-tools
 PyQt5Designer
 wave
+pycipher
+monoalph

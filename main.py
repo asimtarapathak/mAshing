@@ -10,7 +10,9 @@ from cryptography.fernet import Fernet
 from PIL import Image
 import stepic
 import wave
-
+from pycipher import ColTrans, Caesar, Vigenere, ADFGX, ADFGVX, Affine, Autokey, Atbash, Beaufort, Bifid
+import monoalpha
+import re
 
 ui,_ = loadUiType("mAshing.ui")  # This will load the main ui file
 
@@ -52,6 +54,7 @@ class MainApp(QMainWindow,ui):  # Class to create main window
         self.pushButton_4.clicked.connect(self.change_tab_hashing)
         self.pushButton_5.clicked.connect(self.change_tab_password_manager)
         self.pushButton_6.clicked.connect(self.change_tab_steagnography)
+        self.pushButton_18.clicked.connect(self.change_tab_cryptography)
 
         # connecting buttons for encoding/decoding part
         self.pushButton_7.clicked.connect(self.encode_msg)
@@ -83,6 +86,101 @@ class MainApp(QMainWindow,ui):  # Class to create main window
         self.pushButton_16.clicked.connect(self.encode_image)
         self.pushButton_17.clicked.connect(self.decode_image)
 
+        # connecting buttons for cryptography
+        self.pushButton_28.clicked.connect(self.change_tab_caesar)
+        self.pushButton_29.clicked.connect(self.change_tab_vigenere)
+        self.pushButton_30.clicked.connect(self.change_tab_columar_transposition)
+        self.pushButton_32.clicked.connect(self.change_tab_ADFGX)
+        self.pushButton_31.clicked.connect(self.change_tab_ADFGVX)
+        self.pushButton_33.clicked.connect(self.change_tab_affine)
+        self.pushButton_35.clicked.connect(self.change_tab_autokey)
+        self.pushButton_34.clicked.connect(self.change_tab_atbash)
+        self.pushButton_36.clicked.connect(self.change_tab_beaufort)
+        self.pushButton_50.clicked.connect(self.change_tab_bifid)
+        self.pushButton_37.clicked.connect(self.change_tab_monoalphabetic_substitution)
+        self.pushButton_51.clicked.connect(self.change_tab_enigma_m3)
+        self.pushButton_54.clicked.connect(self.change_tab_multiplicative)
+        self.pushButton_52.clicked.connect(self.change_tab_foursquare)
+        self.pushButton_56.clicked.connect(self.change_tab_porta)
+        self.pushButton_55.clicked.connect(self.change_tab_gronsfeld)
+        self.pushButton_57.clicked.connect(self.change_tab_m209)
+        self.pushButton_53.clicked.connect(self.change_tab_playfair)
+        self.pushButton_58.clicked.connect(self.change_tab_polybius_square)
+        self.pushButton_59.clicked.connect(self.change_tab_railfence)
+        self.pushButton_60.clicked.connect(self.change_tab_rot13)
+        self.pushButton_61.clicked.connect(self.change_tab_simple_substitution)
+
+        # caesar cipher buttons
+        self.pushButton_40.clicked.connect(self.caesar_encrypt)
+        self.pushButton_38.clicked.connect(self.caesar_decrypt)
+        self.pushButton_39.clicked.connect(self.caesar_file_browse)
+        self.pushButton_41.clicked.connect(self.change_tab_cryptography)
+
+        # connecting buttons for vigenere cipher
+        self.pushButton_44.clicked.connect(self.change_tab_cryptography)
+        self.pushButton_45.clicked.connect(self.vigenere_encrypt)
+        self.pushButton_43.clicked.connect(self.vigenere_decrypt)
+        self.pushButton_42.clicked.connect(self.vigenere_file_browse)
+
+        # connecting buttons for columar transposition
+        self.pushButton_48.clicked.connect(self.change_tab_cryptography)
+        self.pushButton_49.clicked.connect(self.columar_file_browse)
+        self.pushButton_46.clicked.connect(self.columar_encrypt)
+        self.pushButton_47.clicked.connect(self.columar_decrypt)
+
+        # connecting buttons for ADFGX
+        self.pushButton_63.clicked.connect(self.change_tab_cryptography)
+        self.pushButton_62.clicked.connect(self.ADFGX_file_browse)
+        self.pushButton_65.clicked.connect(self.ADFGX_encrypt)
+        self.pushButton_64.clicked.connect(self.ADFGX_decrypt)
+
+        # connecting buttons for ADFGVX
+        self.pushButton_69.clicked.connect(self.change_tab_cryptography)
+        self.pushButton_68.clicked.connect(self.ADFGVX_file_browse)
+        self.pushButton_67.clicked.connect(self.ADFGVX_encrypt)
+        self.pushButton_66.clicked.connect(self.ADFGVX_decrypt)
+
+        # connecting buttons for Affine
+        self.pushButton_71.clicked.connect(self.change_tab_cryptography)
+        self.pushButton_73.clicked.connect(self.affine_file_browse)
+        self.pushButton_70.clicked.connect(self.affine_encrypt)
+        self.pushButton_72.clicked.connect(self.affine_decrypt)
+
+        # connecting buttons for Autokey
+        self.pushButton_74.clicked.connect(self.change_tab_cryptography)
+        self.pushButton_76.clicked.connect(self.autokey_file_browse)
+        self.pushButton_75.clicked.connect(self.autokey_encrypt)
+        self.pushButton_77.clicked.connect(self.autokey_decrypt)
+
+        # connecting buttons for Atbash
+        self.pushButton_79.clicked.connect(self.change_tab_cryptography)
+        self.pushButton_80.clicked.connect(self.atbash_file_browse)
+        self.pushButton_78.clicked.connect(self.atbash_encrypt)
+        self.pushButton_81.clicked.connect(self.atbash_decrypt)
+
+        # connecting buttons for Beaufort
+        self.pushButton_84.clicked.connect(self.change_tab_cryptography)
+        self.pushButton_82.clicked.connect(self.Beaufort_file_browse)
+        self.pushButton_83.clicked.connect(self.Beaufort_encrypt)
+        self.pushButton_85.clicked.connect(self.Beaufort_decrypt)
+
+        # connecting buttons for Bifid
+        self.pushButton_88.clicked.connect(self.change_tab_cryptography)
+        self.pushButton_87.clicked.connect(self.Bifid_file_browse)
+        self.pushButton_89.clicked.connect(self.Bifid_encrypt)
+        self.pushButton_86.clicked.connect(self.Bifid_decrypt)
+
+        # connecting buttons for Monoalpha
+        self.pushButton_90.clicked.connect(self.change_tab_cryptography)
+        self.pushButton_92.clicked.connect(self.Monoalpha_file_browse)
+        self.pushButton_91.clicked.connect(self.Monoalpha_encrypt)
+        self.pushButton_93.clicked.connect(self.Monoalpha_decrypt)
+
+        # connecting buttons for Multiplicative
+        self.pushButton_95.clicked.connect(self.change_tab_cryptography)
+        self.pushButton_97.clicked.connect(self.Multiplicative_file_browse)
+        self.pushButton_96.clicked.connect(self.Multiplicative_encrypt)
+        self.pushButton_94.clicked.connect(self.Multiplicative_decrypt)
 
 
     # methods to change tab
@@ -103,6 +201,75 @@ class MainApp(QMainWindow,ui):  # Class to create main window
 
     def change_tab_steagnography(self):
         self.tabWidget.setCurrentIndex(5)
+
+    def change_tab_cryptography(self):
+        self.tabWidget.setCurrentIndex(6)
+
+    def change_tab_caesar(self):
+        self.tabWidget.setCurrentIndex(7)
+
+    def change_tab_vigenere(self):
+        self.tabWidget.setCurrentIndex(8)
+
+    def change_tab_columar_transposition(self):
+        self.tabWidget.setCurrentIndex(9)
+
+    def change_tab_ADFGX(self):
+        self.tabWidget.setCurrentIndex(10)
+
+    def change_tab_ADFGVX(self):
+        self.tabWidget.setCurrentIndex(11)
+
+    def change_tab_affine(self):
+        self.tabWidget.setCurrentIndex(12)
+
+    def change_tab_autokey(self):
+        self.tabWidget.setCurrentIndex(13)
+
+    def change_tab_atbash(self):
+        self.tabWidget.setCurrentIndex(14)
+
+    def change_tab_beaufort(self):
+        self.tabWidget.setCurrentIndex(15)
+
+    def change_tab_bifid(self):
+        self.tabWidget.setCurrentIndex(16)
+
+    def change_tab_monoalphabetic_substitution(self):
+        self.tabWidget.setCurrentIndex(17)
+
+    def change_tab_enigma_m3(self):
+        self.tabWidget.setCurrentIndex(18)
+
+    def change_tab_multiplicative(self):
+        self.tabWidget.setCurrentIndex(19)
+
+    def change_tab_foursquare(self):
+        self.tabWidget.setCurrentIndex(20)
+
+    def change_tab_porta(self):
+        self.tabWidget.setCurrentIndex(21)
+
+    def change_tab_gronsfeld(self):
+        self.tabWidget.setCurrentIndex(22)
+
+    def change_tab_m209(self):
+        self.tabWidget.setCurrentIndex(23)
+
+    def change_tab_playfair(self):
+        self.tabWidget.setCurrentIndex(24)
+
+    def change_tab_polybius_square(self):
+        self.tabWidget.setCurrentIndex(25)
+
+    def change_tab_railfence(self):
+        self.tabWidget.setCurrentIndex(26)
+
+    def change_tab_rot13(self):
+        self.tabWidget.setCurrentIndex(27)
+
+    def change_tab_simple_substitution(self):
+        self.tabWidget.setCurrentIndex(28)
 
 
     # methods for hashing and hash cracking starts here
@@ -684,6 +851,989 @@ class MainApp(QMainWindow,ui):  # Class to create main window
                             QMessageBox.warning(self, "Error", "Oops! problem occured while decoding please try again!")
 
     # methods for steagnography ends here
+
+
+    # methods for cryptography starts here
+
+    # method for caesar cipher starts here
+    def caesar_encrypt(self):
+        msg = self.textEdit_5.toPlainText()
+        key = self.spinBox_2.value()
+        if self.checkBox_2.isChecked():
+            file_check = True
+        else:
+            file_check = False
+        file = self.lineEdit_7.text()
+
+        if file_check == False:
+            if msg == "":
+                QMessageBox.warning(self, "Data Error", "Message Box is empty")
+            else:
+                enc_msg = Caesar(key).encipher(msg,keep_punct=True)
+                self.textBrowser_10.setText(enc_msg)
+
+        if file_check == True:
+            if file == "":
+                QMessageBox.warning(self, "File Error", "File is not selected")
+            else:
+                try:
+                    enc_file_name = QFileDialog.getSaveFileName(self,"Save File as","encrypted_file.txt","Text File (*.txt)")
+                    enc_file = enc_file_name[0]
+                    with open(file,"r") as file1, open(enc_file,"w") as file2:
+                        chunk = 0
+                        while chunk != "":
+                            chunk = file1.read(1024)
+                            file2.write(Caesar(key).encipher(chunk,keep_punct=True))
+                    QMessageBox.about(self,"mAshing","File Encrypted and saved")
+                except:
+                    QMessageBox.warning(self, "Error", "Error While saving the file , please redo the process again.")
+
+    def caesar_decrypt(self):
+        msg = self.textEdit_5.toPlainText()
+        key = self.spinBox_2.value()
+        if self.checkBox_2.isChecked():
+            file_check = True
+        else:
+            file_check = False
+        file = self.lineEdit_7.text()
+
+        if file_check == False:
+            if msg == "":
+                QMessageBox.warning(self, "Data Error", "Message Box is empty")
+            else:
+                dec_msg = Caesar(key).decipher(msg,keep_punct=True)
+                self.textBrowser_10.setText(dec_msg)
+
+        if file_check == True:
+            if file == "":
+                QMessageBox.warning(self, "File Error", "File is not selected")
+            else:
+                try:
+                    dec_file_name = QFileDialog.getSaveFileName(self,"Save File as","decrypted_file.txt","Text File (*.txt)")
+                    dec_file = dec_file_name[0]
+                    with open(file,"r") as file1, open(dec_file,"w") as file2:
+                        chunk = 0
+                        while chunk != "":
+                            chunk = file1.read(1024)
+                            file2.write(Caesar(key).decipher(chunk,keep_punct=True))
+                    QMessageBox.about(self,"mAshing","File Decrypted and saved")
+                except:
+                    QMessageBox.warning(self, "Error", "Error While saving the file , please redo the process again.")
+
+    def caesar_file_browse(self):
+        try:
+            filename = QFileDialog.getOpenFileNames(self, "Select a wordlist file: ", "","Text File (*.txt)")
+            file = filename[0][0]
+            self.lineEdit_7.setText(file)
+        except:
+            QMessageBox.about(self,"mAshing","File Not Selected")
+    # method for caesar cipher ends here
+
+    # method for Vigenere Cipher starts here
+    def vigenere_encrypt(self):
+        msg = self.textEdit_6.toPlainText()
+        key = self.lineEdit_9.text()
+        if self.checkBox_3.isChecked():
+            file_check = True
+        else:
+            file_check = False
+        file = self.lineEdit_8.text()
+
+        if file_check == False:
+            if msg == "" or key=="":
+                QMessageBox.warning(self, "Data Error", "Message Box or Key is empty")
+            else:
+                try:
+                    enc_msg = Vigenere(key).encipher(msg)
+                    self.textBrowser_11.setText(enc_msg)
+                except:
+                    QMessageBox.warning(self,"Key Error","Looks like Key Contains punctuation or whitespace,\nremove it and try again please.")
+
+        if file_check == True:
+            if file == "" or key=="":
+                QMessageBox.warning(self, "File Error", "File/Key is not selected")
+            else:
+                try:
+                    enc_file_name = QFileDialog.getSaveFileName(self,"Save File as","encrypted_file.txt","Text File (*.txt)")
+                    enc_file = enc_file_name[0]
+                    with open(file,"r") as file1, open(enc_file,"w") as file2:
+                        chunk = 0
+                        while chunk != "":
+                            chunk = file1.read(1024)
+                            file2.write(Vigenere(key).encipher(chunk))
+                    QMessageBox.about(self,"mAshing","File Encrypted and saved")
+                except:
+                    QMessageBox.warning(self, "Error", "Error While saving the file , please redo the process again.")
+
+    def vigenere_decrypt(self):
+        msg = self.textEdit_6.toPlainText()
+        key = self.lineEdit_9.text()
+        if self.checkBox_3.isChecked():
+            file_check = True
+        else:
+            file_check = False
+        file = self.lineEdit_8.text()
+
+        if file_check == False:
+            if msg == "" or key=="":
+                QMessageBox.warning(self, "Data Error", "Message Box or Key is empty")
+            else:
+                try:
+                    dec_msg = Vigenere(key).decipher(msg)
+                    self.textBrowser_11.setText(dec_msg)
+                except:
+                    QMessageBox.warning(self,"Key Error","Looks like Key Contains punctuation or whitespace,\nremove it and try again please.")
+
+
+        if file_check == True:
+            if file == "" or key=="":
+                QMessageBox.warning(self, "File Error", "File/Key is not selected")
+            else:
+                try:
+                    dec_file_name = QFileDialog.getSaveFileName(self,"Save File as","decrypted_file.txt","Text File (*.txt)")
+                    dec_file = dec_file_name[0]
+                    with open(file,"r") as file1, open(dec_file,"w") as file2:
+                        chunk = 0
+                        while chunk != "":
+                            chunk = file1.read(1024)
+                            file2.write(Vigenere(key).decipher(chunk))
+                    QMessageBox.about(self,"mAshing","File Decrypted and saved")
+                except:
+                    QMessageBox.warning(self, "Error", "Error While saving the file , please redo the process again.")
+
+
+    def vigenere_file_browse(self):
+        try:
+            filename = QFileDialog.getOpenFileNames(self, "Select a wordlist file: ", "","Text File (*.txt)")
+            file = filename[0][0]
+            self.lineEdit_8.setText(file)
+        except:
+            QMessageBox.about(self,"mAshing","File Not Selected")
+    # method for Vigenere Cipher ends here
+
+    # method for Columnar Transposition starts here
+    def columar_encrypt(self):
+        msg = self.textEdit_7.toPlainText()
+        key = self.lineEdit_10.text()
+        if self.checkBox_4.isChecked():
+            file_check = True
+        else:
+            file_check = False
+        file = self.lineEdit_11.text()
+
+        if file_check == False:
+            if msg == "" or key=="":
+                QMessageBox.warning(self, "Data Error", "Message Box or Key is empty")
+            else:
+                enc_msg = ColTrans(key).encipher(msg)
+                self.textBrowser_12.setText(enc_msg)
+
+        if file_check == True:
+            if file == "" or key=="":
+                QMessageBox.warning(self, "File Error", "File/Key is not selected")
+            else:
+                try:
+                    enc_file_name = QFileDialog.getSaveFileName(self,"Save File as","encrypted_file.txt","Text File (*.txt)")
+                    enc_file = enc_file_name[0]
+                    with open(file,"r") as file1, open(enc_file,"w") as file2:
+                        chunk = 0
+                        while chunk != "":
+                            chunk = file1.read(1024)
+                            file2.write(ColTrans(key).encipher(chunk))
+                    QMessageBox.about(self,"mAshing","File Encrypted and saved")
+                except:
+                    QMessageBox.warning(self, "Error", "Error While saving the file , please redo the process again.")
+
+    def columar_decrypt(self):
+        msg = self.textEdit_7.toPlainText()
+        key = self.lineEdit_10.text()
+        if self.checkBox_4.isChecked():
+            file_check = True
+        else:
+            file_check = False
+        file = self.lineEdit_11.text()
+
+        if file_check == False:
+            if msg == "" or key=="":
+                QMessageBox.warning(self, "Data Error", "Message Box or Key is empty")
+            else:
+                dec_msg = ColTrans(key).decipher(msg)
+                self.textBrowser_12.setText(dec_msg)
+
+        if file_check == True:
+            if file == "" or key=="":
+                QMessageBox.warning(self, "File Error", "File/Key is not selected")
+            else:
+                try:
+                    dec_file_name = QFileDialog.getSaveFileName(self,"Save File as","decrypted_file.txt","Text File (*.txt)")
+                    dec_file = dec_file_name[0]
+                    with open(file,"r") as file1, open(dec_file,"w") as file2:
+                        chunk = 0
+                        while chunk != "":
+                            chunk = file1.read(1024)
+                            file2.write(ColTrans(key).decipher(chunk))
+                    QMessageBox.about(self,"mAshing","File Decrypted and saved")
+                except:
+                    QMessageBox.warning(self, "Error", "Error While saving the file , please redo the process again.")
+
+    def columar_file_browse(self):
+        try:
+            filename = QFileDialog.getOpenFileNames(self, "Select a wordlist file: ", "","Text File (*.txt)")
+            file = filename[0][0]
+            self.lineEdit_11.setText(file)
+        except:
+            QMessageBox.about(self,"mAshing","File Not Selected")
+    # method for Columnar Transposition ends here
+
+    # method for ADFGX starts here
+    def ADFGX_encrypt(self):
+        msg = self.textEdit_8.toPlainText()
+        key = self.lineEdit_13.text()
+        char_matrix = self.lineEdit_14.text()
+        if self.checkBox_5.isChecked():
+            file_check = True
+        else:
+            file_check = False
+        file = self.lineEdit_12.text()
+
+        if file_check == False:
+            if msg == "" or key=="" or char_matrix=="" or len(char_matrix)!=25:
+                QMessageBox.warning(self, "Data Error", "Message Box or Key or Matrix Chars is empty\nMaybe Matrix Chars is less than 25 chars")
+            else:
+                try:
+                    enc_msg = ADFGX(char_matrix,key).encipher(msg)
+                    self.textBrowser_13.setText(enc_msg)
+                except:
+                    QMessageBox.warning(self,"Matrix Char Error","Looks like Matrix chars Contains punctuation or whitespace,\nremove it and try again please.")
+
+
+        if file_check == True:
+            if file == "" or key=="" or char_matrix=="" or len(char_matrix)!=25:
+                QMessageBox.warning(self, "File Error", "File/Key is not selected\nMaybe Matrix Chars is less than 25 chars or empty")
+            else:
+                try:
+                    enc_file_name = QFileDialog.getSaveFileName(self,"Save File as","encrypted_file.txt","Text File (*.txt)")
+                    enc_file = enc_file_name[0]
+                    with open(file,"r") as file1, open(enc_file,"w") as file2:
+                        chunk = 0
+                        while chunk != "":
+                            chunk = file1.read(1024)
+                            file2.write(ADFGX(char_matrix,key).encipher(chunk))
+                    QMessageBox.about(self,"mAshing","File Encrypted and saved")
+                except:
+                    QMessageBox.warning(self, "Error", "Error While saving the file , please redo the process again.")
+
+    def ADFGX_decrypt(self):
+        msg = self.textEdit_8.toPlainText()
+        key = self.lineEdit_13.text()
+        char_matrix = self.lineEdit_14.text()
+        if self.checkBox_5.isChecked():
+            file_check = True
+        else:
+            file_check = False
+        file = self.lineEdit_12.text()
+
+        if file_check == False:
+            if msg == "" or key=="" or char_matrix=="" or len(char_matrix)!=25:
+                QMessageBox.warning(self, "Data Error", "Message Box or Key or Matrix Chars is empty\nMaybe Matrix Chars is less than 25 chars")
+            else:
+                try:
+                    dec_msg = ADFGX(char_matrix,key).decipher(msg)
+                    self.textBrowser_13.setText(dec_msg)
+                except:
+                    QMessageBox.warning(self, "mAshing", "Cipher Could not be Decrypted\nMaybe cipher text/key/matrix chars is wrong")
+
+
+        if file_check == True:
+            if file == "" or key=="" or char_matrix=="" or len(char_matrix)!=25:
+                QMessageBox.warning(self, "File Error", "File/Key is not selected\nMaybe Matrix Chars is less than 25 chars or empty")
+            else:
+                try:
+                    dec_file_name = QFileDialog.getSaveFileName(self,"Save File as","decrypted_file.txt","Text File (*.txt)")
+                    dec_file = dec_file_name[0]
+                    with open(file,"r") as file1, open(dec_file,"w") as file2:
+                        chunk = 0
+                        while chunk != "":
+                            chunk = file1.read(1024)
+                            file2.write(ADFGX(char_matrix,key).decipher(chunk))
+                    QMessageBox.about(self,"mAshing","File Decrypted and saved")
+                except:
+                    QMessageBox.warning(self, "Error", "Error While saving the file , please redo the process again.")
+
+    def ADFGX_file_browse(self):
+        try:
+            filename = QFileDialog.getOpenFileNames(self, "Select a wordlist file: ", "","Text File (*.txt)")
+            file = filename[0][0]
+            self.lineEdit_12.setText(file)
+        except:
+            QMessageBox.about(self,"mAshing","File Not Selected")
+    # method for ADFGX ends here
+
+    # method for ADFGVX starts here
+    def ADFGVX_encrypt(self):
+        msg = self.textEdit_9.toPlainText()
+        key = self.lineEdit_15.text()
+        char_matrix = self.lineEdit_17.text()
+        if self.checkBox_6.isChecked():
+            file_check = True
+        else:
+            file_check = False
+        file = self.lineEdit_16.text()
+
+        if file_check == False:
+            if msg == "" or key=="" or char_matrix=="" or len(char_matrix)!=36:
+                QMessageBox.warning(self, "Data Error", "Message Box or Key or Matrix Chars is empty\nMaybe Matrix Chars is less than 25 chars")
+            else:
+                enc_msg = ADFGVX(char_matrix,key).encipher(msg)
+                self.textBrowser_14.setText(enc_msg)
+
+        if file_check == True:
+            if file == "" or key=="" or char_matrix=="" or len(char_matrix)!=36:
+                QMessageBox.warning(self, "File Error", "File/Key is not selected\nMaybe Matrix Chars is less than 25 chars or empty")
+            else:
+                try:
+                    enc_file_name = QFileDialog.getSaveFileName(self,"Save File as","encrypted_file.txt","Text File (*.txt)")
+                    enc_file = enc_file_name[0]
+                    with open(file,"r") as file1, open(enc_file,"w") as file2:
+                        chunk = 0
+                        while chunk != "":
+                            chunk = file1.read(1024)
+                            file2.write(ADFGVX(char_matrix,key).encipher(chunk))
+                    QMessageBox.about(self,"mAshing","File Encrypted and saved")
+                except:
+                    QMessageBox.warning(self, "Error", "Error While saving the file , please redo the process again.")
+
+    def ADFGVX_decrypt(self):
+        msg = self.textEdit_9.toPlainText()
+        key = self.lineEdit_15.text()
+        char_matrix = self.lineEdit_17.text()
+        if self.checkBox_6.isChecked():
+            file_check = True
+        else:
+            file_check = False
+        file = self.lineEdit_16.text()
+
+        if file_check == False:
+            if msg == "" or key=="" or char_matrix=="" or len(char_matrix)!=36:
+                QMessageBox.warning(self, "Data Error", "Message Box or Key or Matrix Chars is empty\nMaybe Matrix Chars is less than 25 chars")
+            else:
+                try:
+                    dec_msg = ADFGVX(char_matrix,key).decipher(msg)
+                    self.textBrowser_14.setText(dec_msg)
+                except:
+                    QMessageBox.warning(self, "mAshing", "Cipher Could not be Decrypted\nMaybe cipher text/key/matrix chars is wrong")
+
+
+        if file_check == True:
+            if file == "" or key=="" or char_matrix=="" or len(char_matrix)!=36:
+                QMessageBox.warning(self, "File Error", "File/Key is not selected\nMaybe Matrix Chars is less than 25 chars or empty")
+            else:
+                try:
+                    dec_file_name = QFileDialog.getSaveFileName(self,"Save File as","decrypted_file.txt","Text File (*.txt)")
+                    dec_file = dec_file_name[0]
+                    with open(file,"r") as file1, open(dec_file,"w") as file2:
+                        chunk = 0
+                        while chunk != "":
+                            chunk = file1.read(1024)
+                            file2.write(ADFGVX(char_matrix,key).decipher(chunk))
+                    QMessageBox.about(self,"mAshing","File Decrypted and saved")
+                except:
+                    QMessageBox.warning(self, "Error", "Error While saving the file , please redo the process again.")
+
+    def ADFGVX_file_browse(self):
+        try:
+            filename = QFileDialog.getOpenFileNames(self, "Select a wordlist file: ", "","Text File (*.txt)")
+            file = filename[0][0]
+            self.lineEdit_16.setText(file)
+        except:
+            QMessageBox.about(self,"mAshing","File Not Selected")
+    # method for ADFGVX ends here
+
+    # method for Affine starts here
+    def affine_encrypt(self):
+        msg = self.textEdit_10.toPlainText()
+        a_key = self.comboBox_7.currentText()
+        b_key = self.spinBox_3.value()
+        if self.checkBox_7.isChecked():
+            file_check = True
+        else:
+            file_check = False
+        file = self.lineEdit_20.text()
+
+        if file_check == False:
+            if msg == "":
+                QMessageBox.warning(self, "Data Error", "Message Box is empty")
+            else:
+                enc_msg = Affine(int(a_key),int(b_key)).encipher(msg,keep_punct=True)
+                self.textBrowser_15.setText(enc_msg)
+
+        if file_check == True:
+            if file == "":
+                QMessageBox.warning(self, "File Error", "File is not selected")
+            else:
+                try:
+                    enc_file_name = QFileDialog.getSaveFileName(self,"Save File as","encrypted_file.txt","Text File (*.txt)")
+                    enc_file = enc_file_name[0]
+                    with open(file,"r") as file1, open(enc_file,"w") as file2:
+                        chunk = 0
+                        while chunk != "":
+                            chunk = file1.read(1024)
+                            file2.write(Affine(int(a_key),int(b_key)).encipher(chunk,keep_punct=True))
+                    QMessageBox.about(self,"mAshing","File Encrypted and saved")
+                except:
+                    QMessageBox.warning(self, "Error", "Error While saving the file , please redo the process again.")
+
+    def affine_decrypt(self):
+        msg = self.textEdit_10.toPlainText()
+        a_key =  self.comboBox_7.currentText()
+        b_key = self.spinBox_3.value()
+        if self.checkBox_7.isChecked():
+            file_check = True
+        else:
+            file_check = False
+        file = self.lineEdit_20.text()
+
+        if file_check == False:
+            if msg == "":
+                QMessageBox.warning(self, "Data Error", "Message Box is empty")
+            else:
+                dec_msg = Affine(int(a_key),int(b_key)).decipher(msg,keep_punct=True)
+                self.textBrowser_15.setText(dec_msg)
+
+
+        if file_check == True:
+            if file == "":
+                QMessageBox.warning(self, "File Error", "File is not selected")
+            else:
+                try:
+                    dec_file_name = QFileDialog.getSaveFileName(self,"Save File as","decrypted_file.txt","Text File (*.txt)")
+                    dec_file = dec_file_name[0]
+                    with open(file,"r") as file1, open(dec_file,"w") as file2:
+                        chunk = 0
+                        while chunk != "":
+                            chunk = file1.read(1024)
+                            file2.write(Affine(int(a_key),int(b_key)).decipher(chunk,keep_punct=True))
+                    QMessageBox.about(self,"mAshing","File Decrypted and saved")
+                except:
+                    QMessageBox.warning(self, "Error", "Error While saving the file , please redo the process again.")
+
+    def affine_file_browse(self):
+        try:
+            filename = QFileDialog.getOpenFileNames(self, "Select a wordlist file: ", "","Text File (*.txt)")
+            file = filename[0][0]
+            self.lineEdit_20.setText(file)
+        except:
+            QMessageBox.about(self,"mAshing","File Not Selected")
+    # method for Affine ends here
+
+    # method for Autokey starts here
+    def autokey_encrypt(self):
+        msg = self.textEdit_11.toPlainText()
+        key = self.lineEdit_18.text()
+        if self.checkBox_8.isChecked():
+            file_check = True
+        else:
+            file_check = False
+        file = self.lineEdit_19.text()
+
+        if file_check == False:
+            if msg == "":
+                QMessageBox.warning(self, "Data Error", "Message Box is empty")
+            else:
+                try:
+                    enc_msg = Autokey(key).encipher(msg)
+                    self.textBrowser_16.setText(enc_msg)
+                except:
+                    QMessageBox.warning(self,"Key Error","Looks like Key Contains punctuation or whitespace,\nremove it and try again please.")
+
+        if file_check == True:
+            if file == "":
+                QMessageBox.warning(self, "File Error", "File is not selected")
+            else:
+                try:
+                    enc_file_name = QFileDialog.getSaveFileName(self,"Save File as","encrypted_file.txt","Text File (*.txt)")
+                    enc_file = enc_file_name[0]
+                    with open(file,"r") as file1, open(enc_file,"w") as file2:
+                        chunk = 0
+                        while chunk != "":
+                            chunk = file1.read(1024)
+                            file2.write(Autokey(key).encipher(chunk))
+                    QMessageBox.about(self,"mAshing","File Encrypted and saved")
+                except:
+                    QMessageBox.warning(self, "Error", "Error While saving the file , please redo the process again.")
+
+    def autokey_decrypt(self):
+        msg = self.textEdit_11.toPlainText()
+        key = self.lineEdit_18.text()
+        if self.checkBox_8.isChecked():
+            file_check = True
+        else:
+            file_check = False
+        file = self.lineEdit_19.text()
+
+        if file_check == False:
+            if msg == "":
+                QMessageBox.warning(self, "Data Error", "Message Box is empty")
+            else:
+                try:
+                    dec_msg = Autokey(key).decipher(msg)
+                    self.textBrowser_16.setText(dec_msg)
+                except:
+                    QMessageBox.warning(self,"Key Error","Looks like Key Contains punctuation or whitespace,\nremove it and try again please.")
+
+
+
+        if file_check == True:
+            if file == "":
+                QMessageBox.warning(self, "File Error", "File is not selected")
+            else:
+                try:
+                    dec_file_name = QFileDialog.getSaveFileName(self,"Save File as","decrypted_file.txt","Text File (*.txt)")
+                    dec_file = dec_file_name[0]
+                    with open(file,"r") as file1, open(dec_file,"w") as file2:
+                        chunk = 0
+                        while chunk != "":
+                            chunk = file1.read(1024)
+                            file2.write(Autokey(key).decipher(chunk))
+                    QMessageBox.about(self,"mAshing","File Decrypted and saved")
+                except:
+                    QMessageBox.warning(self, "Error", "Error While saving the file , please redo the process again.")
+
+    def autokey_file_browse(self):
+        try:
+            filename = QFileDialog.getOpenFileNames(self, "Select a wordlist file: ", "","Text File (*.txt)")
+            file = filename[0][0]
+            self.lineEdit_19.setText(file)
+        except:
+            QMessageBox.about(self,"mAshing","File Not Selected")
+    # method for Autokey ends here
+
+    # method for Atbash starts here
+    def atbash_encrypt(self):
+        msg = self.textEdit_12.toPlainText()
+        if self.checkBox_9.isChecked():
+            file_check = True
+        else:
+            file_check = False
+        file = self.lineEdit_21.text()
+
+        if file_check == False:
+            if msg == "":
+                QMessageBox.warning(self, "Data Error", "Message Box is empty")
+            else:
+                enc_msg = Atbash().encipher(msg,keep_punct=True)
+                self.textBrowser_17.setText(enc_msg)
+
+        if file_check == True:
+            if file == "":
+                QMessageBox.warning(self, "File Error", "File is not selected")
+            else:
+                try:
+                    enc_file_name = QFileDialog.getSaveFileName(self,"Save File as","encrypted_file.txt","Text File (*.txt)")
+                    enc_file = enc_file_name[0]
+                    with open(file,"r") as file1, open(enc_file,"w") as file2:
+                        chunk = 0
+                        while chunk != "":
+                            chunk = file1.read(1024)
+                            file2.write(Atbash().encipher(chunk,keep_punct=True))
+                    QMessageBox.about(self,"mAshing","File Encrypted and saved")
+                except:
+                    QMessageBox.warning(self, "Error", "Error While saving the file , please redo the process again.")
+
+    def atbash_decrypt(self):
+        msg = self.textEdit_12.toPlainText()
+        if self.checkBox_9.isChecked():
+            file_check = True
+        else:
+            file_check = False
+        file = self.lineEdit_21.text()
+
+        if file_check == False:
+            if msg == "":
+                QMessageBox.warning(self, "Data Error", "Message Box is empty")
+            else:
+                dec_msg = Atbash().decipher(msg,keep_punct=True)
+                self.textBrowser_17.setText(dec_msg)
+
+        if file_check == True:
+            if file == "":
+                QMessageBox.warning(self, "File Error", "File is not selected")
+            else:
+                try:
+                    dec_file_name = QFileDialog.getSaveFileName(self,"Save File as","decrypted_file.txt","Text File (*.txt)")
+                    dec_file = dec_file_name[0]
+                    with open(file,"r") as file1, open(dec_file,"w") as file2:
+                        chunk = 0
+                        while chunk != "":
+                            chunk = file1.read(1024)
+                            file2.write(Atbash().decipher(chunk,keep_punct=True))
+                    QMessageBox.about(self,"mAshing","File Decrypted and saved")
+                except:
+                    QMessageBox.warning(self, "Error", "Error While saving the file , please redo the process again.")
+
+    def atbash_file_browse(self):
+        try:
+            filename = QFileDialog.getOpenFileNames(self, "Select a wordlist file: ", "","Text File (*.txt)")
+            file = filename[0][0]
+            self.lineEdit_21.setText(file)
+        except:
+            QMessageBox.about(self,"mAshing","File Not Selected")
+    # method for Atbash ends here
+
+    # method for Beaufort starts here
+    def Beaufort_encrypt(self):
+        msg = self.textEdit_13.toPlainText()
+        key = self.lineEdit_23.text()
+        if self.checkBox_10.isChecked():
+            file_check = True
+        else:
+            file_check = False
+        file = self.lineEdit_22.text()
+
+        if file_check == False:
+            if msg == "":
+                QMessageBox.warning(self, "Data Error", "Message Box is empty")
+            else:
+                enc_msg = Beaufort(key).encipher(msg)
+                self.textBrowser_18.setText(enc_msg)
+
+        if file_check == True:
+            if file == "":
+                QMessageBox.warning(self, "File Error", "File is not selected")
+            else:
+                try:
+                    enc_file_name = QFileDialog.getSaveFileName(self,"Save File as","encrypted_file.txt","Text File (*.txt)")
+                    enc_file = enc_file_name[0]
+                    with open(file,"r") as file1, open(enc_file,"w") as file2:
+                        chunk = 0
+                        while chunk != "":
+                            chunk = file1.read(1024)
+                            file2.write(Beaufort(key).encipher(chunk))
+                    QMessageBox.about(self,"mAshing","File Encrypted and saved")
+                except:
+                    QMessageBox.warning(self, "Error", "Error While saving the file , please redo the process again.")
+
+    def Beaufort_decrypt(self):
+        msg = self.textEdit_13.toPlainText()
+        key = self.lineEdit_23.text()
+        if self.checkBox_10.isChecked():
+            file_check = True
+        else:
+            file_check = False
+        file = self.lineEdit_22.text()
+
+        if file_check == False:
+            if msg == "":
+                QMessageBox.warning(self, "Data Error", "Message Box is empty")
+            else:
+                dec_msg = Beaufort(key).decipher(msg)
+                self.textBrowser_18.setText(dec_msg)
+
+        if file_check == True:
+            if file == "":
+                QMessageBox.warning(self, "File Error", "File is not selected")
+            else:
+                try:
+                    dec_file_name = QFileDialog.getSaveFileName(self,"Save File as","decrypted_file.txt","Text File (*.txt)")
+                    dec_file = dec_file_name[0]
+                    with open(file,"r") as file1, open(dec_file,"w") as file2:
+                        chunk = 0
+                        while chunk != "":
+                            chunk = file1.read(1024)
+                            file2.write(Beaufort(key).decipher(chunk))
+                    QMessageBox.about(self,"mAshing","File Decrypted and saved")
+                except:
+                    QMessageBox.warning(self, "Error", "Error While saving the file , please redo the process again.")
+
+    def Beaufort_file_browse(self):
+        try:
+            filename = QFileDialog.getOpenFileNames(self, "Select a wordlist file: ", "","Text File (*.txt)")
+            file = filename[0][0]
+            self.lineEdit_22.setText(file)
+        except:
+            QMessageBox.about(self,"mAshing","File Not Selected")
+    # method for Beaufort ends here
+
+    # method for Bifid starts here
+    def Bifid_encrypt(self):
+        msg = self.textEdit_14.toPlainText()
+        key = self.lineEdit_25.text()
+        period = self.spinBox_4.value()
+        if self.checkBox_11.isChecked():
+            file_check = True
+        else:
+            file_check = False
+        file = self.lineEdit_24.text()
+
+        if file_check == False:
+            if msg == "" or key=="" or key=="" or len(key)!=25:
+                QMessageBox.warning(self, "Data Error", "Message Box or Key or Matrix Chars is empty\nMaybe Matrix Chars is less than 25 chars")
+            else:
+                try:
+                    enc_msg = Bifid(key,period).encipher(msg)
+                    self.textBrowser_19.setText(enc_msg)
+                except:
+                    QMessageBox.warning(self,"Matrix Char Error","Looks like Matrix chars Contains punctuation or whitespace,\nremove it and try again please.")
+
+
+        if file_check == True:
+            if file == "" or key=="" or key=="" or len(key)!=25:
+                QMessageBox.warning(self, "File Error", "File/Key is not selected\nMaybe Matrix Chars is less than 25 chars or empty")
+            else:
+                try:
+                    enc_file_name = QFileDialog.getSaveFileName(self,"Save File as","encrypted_file.txt","Text File (*.txt)")
+                    enc_file = enc_file_name[0]
+                    with open(file,"r") as file1, open(enc_file,"w") as file2:
+                        chunk = 0
+                        while chunk != "":
+                            chunk = file1.read(1024)
+                            file2.write(Bifid(key,period).encipher(chunk))
+                    QMessageBox.about(self,"mAshing","File Encrypted and saved")
+                except:
+                    QMessageBox.warning(self, "Error", "Error While saving the file , please redo the process again.")
+
+    def Bifid_decrypt(self):
+        msg = self.textEdit_14.toPlainText()
+        key = self.lineEdit_25.text()
+        period = self.spinBox_4.value()
+        if self.checkBox_11.isChecked():
+            file_check = True
+        else:
+            file_check = False
+        file = self.lineEdit_24.text()
+
+        if file_check == False:
+            if msg == "" or key=="" or key=="" or len(key)!=25:
+                QMessageBox.warning(self, "Data Error", "Message Box or Key or Matrix Chars is empty\nMaybe Matrix Chars is less than 25 chars")
+            else:
+                try:
+                    dec_msg = Bifid(key,period).decipher(msg)
+                    self.textBrowser_19.setText(dec_msg)
+                except:
+                    QMessageBox.warning(self, "mAshing", "Cipher Could not be Decrypted\nMaybe cipher text/key/matrix chars is wrong")
+
+
+        if file_check == True:
+            if file == "" or key=="" or key=="" or len(key)!=25:
+                QMessageBox.warning(self, "File Error", "File/Key is not selected\nMaybe Matrix Chars is less than 25 chars or empty")
+            else:
+                try:
+                    dec_file_name = QFileDialog.getSaveFileName(self,"Save File as","decrypted_file.txt","Text File (*.txt)")
+                    dec_file = dec_file_name[0]
+                    with open(file,"r") as file1, open(dec_file,"w") as file2:
+                        chunk = 0
+                        while chunk != "":
+                            chunk = file1.read(1024)
+                            file2.write(Bifid(key,period).decipher(chunk))
+                    QMessageBox.about(self,"mAshing","File Decrypted and saved")
+                except:
+                    QMessageBox.warning(self, "Error", "Error While saving the file , please redo the process again.")
+
+    def Bifid_file_browse(self):
+        try:
+            filename = QFileDialog.getOpenFileNames(self, "Select a wordlist file: ", "","Text File (*.txt)")
+            file = filename[0][0]
+            self.lineEdit_24.setText(file)
+        except:
+            QMessageBox.about(self,"mAshing","File Not Selected")
+    # method for Bifid ends here
+
+    # method for Monoalpha starts here
+    def Monoalpha_encrypt(self):
+        msg = self.textEdit_15.toPlainText()
+        alphabet = self.lineEdit_26.text()
+        if self.checkBox_12.isChecked():
+            file_check = True
+        else:
+            file_check = False
+        file = self.lineEdit_27.text()
+
+        if file_check == False:
+            if msg == "":
+                QMessageBox.warning(self, "Data Error", "Message Box is empty")
+            else:
+                enc_msg = monoalpha.encrypt(msg,alphabet)
+                self.textBrowser_20.setText(enc_msg)
+
+        if file_check == True:
+            if file == "":
+                QMessageBox.warning(self, "File Error", "File is not selected")
+            else:
+                try:
+                    enc_file_name = QFileDialog.getSaveFileName(self,"Save File as","encrypted_file.txt","Text File (*.txt)")
+                    enc_file = enc_file_name[0]
+                    with open(file,"r") as file1, open(enc_file,"w") as file2:
+                        chunk = 0
+                        while chunk != "":
+                            chunk = file1.read(1024)
+                            file2.write(monoalpha.encrypt(chunk,alphabet))
+                    QMessageBox.about(self,"mAshing","File Encrypted and saved")
+                except:
+                    QMessageBox.warning(self, "Error", "Error While saving the file , please redo the process again.")
+
+    def Monoalpha_decrypt(self):
+        msg = self.textEdit_15.toPlainText()
+        alphabet = self.lineEdit_26.text()
+        if self.checkBox_12.isChecked():
+            file_check = True
+        else:
+            file_check = False
+        file = self.lineEdit_27.text()
+
+        if file_check == False:
+            if msg == "":
+                QMessageBox.warning(self, "Data Error", "Message Box is empty")
+            else:
+                dec_msg = monoalpha.decrypt(msg,alphabet)
+                self.textBrowser_20.setText(dec_msg)
+
+        if file_check == True:
+            if file == "":
+                QMessageBox.warning(self, "File Error", "File is not selected")
+            else:
+                try:
+                    dec_file_name = QFileDialog.getSaveFileName(self,"Save File as","decrypted_file.txt","Text File (*.txt)")
+                    dec_file = dec_file_name[0]
+                    with open(file,"r") as file1, open(dec_file,"w") as file2:
+                        chunk = 0
+                        while chunk != "":
+                            chunk = file1.read(1024)
+                            file2.write(monoalpha.decrypt(chunk,alphabet))
+                    QMessageBox.about(self,"mAshing","File Decrypted and saved")
+                except:
+                    QMessageBox.warning(self, "Error", "Error While saving the file , please redo the process again.")
+
+    def Monoalpha_file_browse(self):
+        try:
+            filename = QFileDialog.getOpenFileNames(self, "Select a wordlist file: ", "","Text File (*.txt)")
+            file = filename[0][0]
+            self.lineEdit_27.setText(file)
+        except:
+            QMessageBox.about(self,"mAshing","File Not Selected")
+    # method for Monoalpha ends here
+
+    # method for Multiplicative cipher starts here
+    def Multiplicative_encrypt(self):
+        msg = self.textEdit_16.toPlainText()
+        key = self.spinBox_5.value()
+        key = int(key)
+        if self.checkBox_13.isChecked():
+            file_check = True
+        else:
+            file_check = False
+        file = self.lineEdit_28.text()
+
+        if file_check == False:
+            if msg == "":
+                QMessageBox.warning(self, "Data Error", "Message Box is empty")
+            else:
+                msg = self.to_plain_text(msg)
+                enc_msg = self.Multiplicative_enc(msg,key)
+                self.textBrowser_21.setText(enc_msg)
+
+        if file_check == True:
+            if file == "":
+                QMessageBox.warning(self, "File Error", "File is not selected")
+            else:
+                try:
+                    enc_file_name = QFileDialog.getSaveFileName(self,"Save File as","encrypted_file.txt","Text File (*.txt)")
+                    enc_file = enc_file_name[0]
+                    with open(file,"r") as file1, open(enc_file,"w") as file2:
+                        chunk = 0
+                        while chunk != "":
+                            chunk = file1.read(1024)
+                            chunk = self.to_plain_text(chunk)
+                            file2.write(self.Multiplicative_enc(chunk,key))
+                    QMessageBox.about(self,"mAshing","File Encrypted and saved")
+                except:
+                    QMessageBox.warning(self, "Error", "Error While saving the file , please redo the process again.")
+
+    def Multiplicative_decrypt(self):
+        msg = self.textEdit_16.toPlainText()
+        key = self.spinBox_5.value()
+        key = int(key)
+        if self.checkBox_13.isChecked():
+            file_check = True
+        else:
+            file_check = False
+        file = self.lineEdit_28.text()
+
+        if file_check == False:
+            if msg == "":
+                QMessageBox.warning(self, "Data Error", "Message Box is empty")
+            else:
+                msg = self.to_plain_text(msg)
+                dec_msg = self.Multiplicative_dec(msg,key)
+                self.textBrowser_21.setText(dec_msg)
+
+        if file_check == True:
+            if file == "":
+                QMessageBox.warning(self, "File Error", "File is not selected")
+            else:
+                try:
+                    dec_file_name = QFileDialog.getSaveFileName(self,"Save File as","decrypted_file.txt","Text File (*.txt)")
+                    dec_file = dec_file_name[0]
+                    with open(file,"r") as file1, open(dec_file,"w") as file2:
+                        chunk = 0
+                        while chunk != "":
+                            chunk = file1.read(1024)
+                            chunk = self.to_plain_text(chunk)
+                            file2.write(self.Multiplicative_dec(chunk,key))
+                    QMessageBox.about(self,"mAshing","File Decrypted and saved")
+                except:
+                    QMessageBox.warning(self, "Error", "Error While saving the file , please redo the process again.")
+
+    def Multiplicative_file_browse(self):
+        try:
+            filename = QFileDialog.getOpenFileNames(self, "Select a wordlist file: ", "","Text File (*.txt)")
+            file = filename[0][0]
+            self.lineEdit_28.setText(file)
+        except:
+            QMessageBox.about(self,"mAshing","File Not Selected")
+
+    def to_plain_text(self,msg):
+        plt = msg.strip()
+        if plt.isalpha() or bool(re.search(r"\s", plt)):
+            return plt.upper()
+        else:
+            QMessageBox.warning(self,"mAshing","Plese enter message again, it seems some unsupported character")
+
+    def mul_inverse(self,key):
+        key = key % 26
+        for x in range(1, 26):
+            if (key * x) % 26 == 1:
+                return x
+        return 1
+
+    def Multiplicative_enc(self,msg,key):
+        ct = ""
+        try:
+            for i in msg.split():
+                for j in i:
+                    total = (((ord(j) - 65) * key) % 26)
+                    ct = ct + (chr(total + 65))
+                ct = ct + " "
+            return ct.lower()
+        except:
+            QMessageBox.warning(self,"mAshing","Something went wrong please redo it again")
+
+    def Multiplicative_dec(self,msg,key):
+        plt = ""
+        k = self.mul_inverse(key)
+        try:
+            if True:
+                for i in msg.split():
+                    for j in i:
+                        total = (((ord(j) - 65) * k) % 26)
+                        plt = plt + (chr(total + 65))
+                    plt = plt + " "
+                return plt.upper()
+        except:
+            QMessageBox.warning(self,"mAshing","Something went wrong please redo it again")
+
+    # method for Multiplicative cipher ends here
+
+# methods for cryptography ends here
 
 
 def main():  # Main function to execute app
