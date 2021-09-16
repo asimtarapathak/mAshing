@@ -44,7 +44,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>19</number>
+     <number>18</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -2400,27 +2400,6 @@
        <string>Enigma M3</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_52">
-      <property name="geometry">
-       <rect>
-        <x>290</x>
-        <y>390</y>
-        <width>231</width>
-        <height>71</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>14</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-        <kerning>true</kerning>
-       </font>
-      </property>
-      <property name="text">
-       <string>Foursquare</string>
-      </property>
-     </widget>
      <widget class="QPushButton" name="pushButton_53">
       <property name="geometry">
        <rect>
@@ -2592,10 +2571,10 @@
      <widget class="QPushButton" name="pushButton_61">
       <property name="geometry">
        <rect>
-        <x>240</x>
-        <y>660</y>
-        <width>311</width>
-        <height>51</height>
+        <x>290</x>
+        <y>390</y>
+        <width>231</width>
+        <height>71</height>
        </rect>
       </property>
       <property name="font">
@@ -2607,7 +2586,8 @@
        </font>
       </property>
       <property name="text">
-       <string>Simple Substitution</string>
+       <string>Simple
+        Substitution</string>
       </property>
      </widget>
     </widget>
@@ -5483,6 +5463,2838 @@
      <attribute name="title">
       <string>Enigma M3</string>
      </attribute>
+     <widget class="QSpinBox" name="spinBox_7">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>150</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>8</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_100">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>300</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>File name:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_129">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>360</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Encrypt</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_130">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>410</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Decrypt</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_101">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>150</y>
+        <width>61</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>MS Shell Dlg 2</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Rotor:</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_22">
+      <property name="geometry">
+       <rect>
+        <x>730</x>
+        <y>300</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>17</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>File</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_102">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>150</y>
+        <width>161</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Starting Position:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_41">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>300</y>
+        <width>541</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Enter/Browse text File</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_131">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>730</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Go Back</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_103">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>20</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Message:</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_25">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>20</y>
+        <width>661</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Enter message to encrypt/decrypt</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="textBrowser_30">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>360</y>
+        <width>651</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Encrypted/Decrypted message will appear here</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_8">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>150</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <item>
+       <property name="text">
+        <string>A</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>B</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>C</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>D</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>F</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>G</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>H</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>I</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>J</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>K</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>L</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>M</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>N</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>O</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>P</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Q</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>R</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>S</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>T</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>U</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>V</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>W</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>X</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Y</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Z</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="pushButton_132">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>300</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>....</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_104">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>520</y>
+        <width>781</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Use: &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;For encrypting strings, type strings in message box and select starting position, rotor, reflector, ringstellung and plug board then click on encrypt. To decrypt it, paste encrypted message in msg box and click on decrypt.&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;For encrypting text file, check on File option then browse the file and starting position, rotor, reflector, ringstellung and plug board then click on encrypt then save the encrypted file. To decrypt it, browse the encrypted file then click on decrypt and save the decrypted file. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_9">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>150</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="currentText">
+       <string>B</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>B</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>A</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>C</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>D</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>F</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>G</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>H</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>I</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>J</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>K</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>L</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>M</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>N</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>O</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>P</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Q</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>R</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>S</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>T</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>U</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>V</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>W</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>X</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Y</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Z</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="comboBox_10">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>150</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="currentText">
+       <string>C</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>C</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>A</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>B</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>D</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>F</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>G</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>H</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>I</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>J</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>K</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>L</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>M</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>N</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>O</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>P</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Q</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>R</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>S</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>T</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>U</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>V</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>W</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>X</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Y</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Z</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QSpinBox" name="spinBox_8">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>150</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>8</number>
+      </property>
+      <property name="value">
+       <number>2</number>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBox_9">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>150</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>8</number>
+      </property>
+      <property name="value">
+       <number>3</number>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_11">
+      <property name="geometry">
+       <rect>
+        <x>750</x>
+        <y>150</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <item>
+       <property name="text">
+        <string>A</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>B</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>C</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_105">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>150</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Reflector:</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_12">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>200</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="currentText">
+       <string>C</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>C</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>A</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>B</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>D</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>F</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>G</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>H</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>I</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>J</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>K</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>L</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>M</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>N</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>O</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>P</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Q</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>R</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>S</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>T</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>U</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>V</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>W</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>X</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Y</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Z</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="comboBox_13">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>200</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <item>
+       <property name="text">
+        <string>A</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>B</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>C</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>D</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>F</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>G</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>H</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>I</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>J</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>K</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>L</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>M</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>N</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>O</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>P</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Q</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>R</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>S</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>T</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>U</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>V</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>W</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>X</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Y</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Z</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_106">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>200</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Ringstellung:</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_14">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>200</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="currentText">
+       <string>B</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>B</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>A</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>C</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>D</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>F</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>G</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>H</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>I</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>J</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>K</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>L</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>M</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>N</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>O</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>P</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Q</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>R</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>S</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>T</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>U</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>V</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>W</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>X</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Y</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Z</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_107">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>200</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Plug Board:</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_15">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>200</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <item>
+       <property name="text">
+        <string>A</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>B</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>C</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>D</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>F</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>G</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>H</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>I</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>J</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>K</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>L</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>M</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>N</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>O</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>P</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Q</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>R</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>S</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>T</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>U</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>V</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>W</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>X</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Y</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Z</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="comboBox_16">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>200</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="currentText">
+       <string>B</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>B</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>A</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>C</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>D</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>F</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>G</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>H</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>I</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>J</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>K</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>L</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>M</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>N</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>O</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>P</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Q</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>R</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>S</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>T</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>U</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>V</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>W</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>X</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Y</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Z</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_108">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>200</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>to</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_17">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>200</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="currentText">
+       <string>D</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>D</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>A</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>B</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>C</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>F</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>G</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>H</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>I</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>J</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>K</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>L</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>M</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>N</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>O</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>P</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Q</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>R</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>S</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>T</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>U</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>V</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>W</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>X</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Y</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Z</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="comboBox_18">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>200</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <item>
+       <property name="text">
+        <string>C</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>A</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>B</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>D</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>F</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>G</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>H</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>I</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>J</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>K</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>L</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>M</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>N</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>O</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>P</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Q</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>R</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>S</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>T</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>U</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>V</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>W</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>X</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Y</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Z</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_109">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>200</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>to</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_19">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>250</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="currentText">
+       <string>H</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>H</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>B</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>A</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>C</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>D</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>F</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>G</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>I</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>J</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>K</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>L</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>M</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>N</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>O</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>P</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Q</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>R</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>S</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>T</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>U</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>V</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>W</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>X</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Y</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Z</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="comboBox_20">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>250</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <item>
+       <property name="text">
+        <string>G</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>A</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>B</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>C</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>D</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>F</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>H</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>I</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>J</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>K</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>L</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>M</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>N</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>O</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>P</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Q</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>R</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>S</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>T</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>U</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>V</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>W</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>X</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Y</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Z</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_110">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>250</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>to</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_21">
+      <property name="geometry">
+       <rect>
+        <x>750</x>
+        <y>250</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="currentText">
+       <string>J</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>J</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>B</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>A</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>C</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>D</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>F</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>G</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>H</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>I</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>K</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>L</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>M</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>N</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>O</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>P</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Q</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>R</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>S</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>T</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>U</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>V</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>W</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>X</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Y</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Z</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="comboBox_22">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>250</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <item>
+       <property name="text">
+        <string>I</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>A</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>B</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>C</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>D</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>F</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>G</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>H</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>J</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>K</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>L</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>M</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>N</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>O</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>P</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Q</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>R</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>S</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>T</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>U</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>V</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>W</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>X</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Y</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Z</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_111">
+      <property name="geometry">
+       <rect>
+        <x>720</x>
+        <y>250</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>to</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_23">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>250</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="currentText">
+       <string>F</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>F</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>A</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>B</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>C</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>D</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>G</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>H</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>I</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>J</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>K</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>L</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>M</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>N</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>O</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>P</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Q</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>R</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>S</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>T</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>U</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>V</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>W</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>X</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Y</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Z</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="comboBox_24">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>250</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <item>
+       <property name="text">
+        <string>E</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>A</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>B</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>C</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>D</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>F</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>G</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>H</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>I</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>J</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>K</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>L</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>M</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>N</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>O</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>P</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Q</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>R</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>S</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>T</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>U</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>V</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>W</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>X</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Y</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Z</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_112">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>250</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>to</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_20">
      <attribute name="title">
@@ -5725,57 +8537,1874 @@
        </rect>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Use: &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;For encrypting strings, type strings in message box and select nultiplicative then click on encrypt. To decrypt it, paste encrypted message in msg box and select multiplicative and click on decrypt.&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;For encrypting text file, check on File option then browse the file and select multiplicative, then click on encrypt then save the encrypted file. To decrypt it, browse the encrypted file and selec multiplicative then click on decrypt and save the decrypted file. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Use: &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;For encrypting strings, type strings in message box and select multiplicative then click on encrypt. To decrypt it, paste encrypted message in msg box and select multiplicative and click on decrypt.&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;For encrypting text file, check on File option then browse the file and select multiplicative, then click on encrypt then save the encrypted file. To decrypt it, browse the encrypted file and selec multiplicative then click on decrypt and save the decrypted file. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_21">
-     <attribute name="title">
-      <string>Foursquare</string>
-     </attribute>
-    </widget>
     <widget class="QWidget" name="tab_22">
      <attribute name="title">
       <string>Porta</string>
      </attribute>
+     <widget class="QPushButton" name="pushButton_102">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>340</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Decrypt</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_75">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>180</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Key:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_76">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>480</y>
+        <width>781</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Use: &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;For encrypting strings, type strings in message box and enter key then click on encrypt. To decrypt it, paste encrypted message in msg box and click on decrypt.&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;For encrypting text file, check on File option then browse the file and enter kry then click on encrypt then save the encrypted file. To decrypt it, browse the encrypted file and enter key then click on decrypt and save the decrypted file. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_103">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>290</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Encrypt</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_15">
+      <property name="geometry">
+       <rect>
+        <x>680</x>
+        <y>180</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>17</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>File</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_104">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>690</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Go Back</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_77">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>60</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Message:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_31">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>230</y>
+        <width>591</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Enter/Browse text File</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_18">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>60</y>
+        <width>661</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Enter message to encrypt/decrypt</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_78">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>230</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>File name:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_32">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>180</y>
+        <width>531</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="maxLength">
+       <number>26</number>
+      </property>
+      <property name="placeholderText">
+       <string>Enter a string as key</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="textBrowser_23">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>290</y>
+        <width>651</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Encrypted/Decrypted message will appear here</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_105">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>230</y>
+        <width>51</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>....</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_23">
      <attribute name="title">
       <string>Gronsfeld</string>
      </attribute>
+     <widget class="QTextBrowser" name="textBrowser_24">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>290</y>
+        <width>651</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Encrypted/Decrypted message will appear here</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_16">
+      <property name="geometry">
+       <rect>
+        <x>730</x>
+        <y>230</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>17</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>File</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_79">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>230</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>File name:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_106">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>340</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Decrypt</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_80">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>480</y>
+        <width>781</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Use: &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;For encrypting strings, type strings in message box and enter key then click on encrypt. To decrypt it, paste encrypted message in msg box and click on decrypt.&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;For encrypting text file, check on File option then browse the file and enter kry then click on encrypt then save the encrypted file. To decrypt it, browse the encrypted file and enter key then click on decrypt and save the decrypted file. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_107">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>290</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Encrypt</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_33">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>180</y>
+        <width>531</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="maxLength">
+       <number>26</number>
+      </property>
+      <property name="placeholderText">
+       <string>Enter only numerical digits as key sperated with comma</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_81">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>180</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Key:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_108">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>230</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>....</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_34">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>230</y>
+        <width>521</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Enter/Browse text File</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_109">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>690</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Go Back</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_82">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>60</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Message:</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_19">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>60</y>
+        <width>661</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Enter message to encrypt/decrypt</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_24">
      <attribute name="title">
       <string>M209</string>
      </attribute>
+     <widget class="QCheckBox" name="checkBox_17">
+      <property name="geometry">
+       <rect>
+        <x>730</x>
+        <y>190</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>17</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>File</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_110">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>250</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Encrypt</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_111">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>300</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Decrypt</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_112">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>690</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Go Back</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_83">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>190</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>File name:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_84">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>480</y>
+        <width>781</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Use: &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;For encrypting strings, type strings in message box and then click on encrypt. To decrypt it, paste encrypted message in msg box and click on decrypt.&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;For encrypting text file, check on File option then browse the file and then click on encrypt then save the encrypted file. To decrypt it, browse the encrypted file and then click on decrypt and save the decrypted file. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_20">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>60</y>
+        <width>661</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Enter message to encrypt/decrypt</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_85">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>60</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Message:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_35">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>190</y>
+        <width>531</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Enter/Browse text File</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="textBrowser_25">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>250</y>
+        <width>651</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Encrypted/Decrypted message will appear here</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_113">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>190</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>....</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_25">
      <attribute name="title">
       <string>Playfair</string>
      </attribute>
+     <widget class="QPushButton" name="pushButton_114">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>220</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>....</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_115">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>280</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Encrypt</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="textBrowser_26">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>280</y>
+        <width>651</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Encrypted/Decrypted message will appear here</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_18">
+      <property name="geometry">
+       <rect>
+        <x>730</x>
+        <y>220</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>17</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>File</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_86">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>50</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Message:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_116">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>330</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Decrypt</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_88">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>220</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>File name:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_89">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>500</y>
+        <width>781</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Use: &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;For encrypting strings, type strings in message box and enter a string as key then click on encrypt. To decrypt it, paste encrypted message in msg box and enter a string as key and click on decrypt.&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;For encrypting text file, check on File option then browse the file and enter a string as key then click on encrypt then save the encrypted file. To decrypt it, browse the encrypted file and enter a string as key then click on decrypt and save the decrypted file. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_36">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>170</y>
+        <width>531</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="maxLength">
+       <number>25</number>
+      </property>
+      <property name="placeholderText">
+       <string>Enter 25 character string</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_21">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>50</y>
+        <width>661</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Enter message to encrypt/decrypt</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_90">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>170</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Key:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_38">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>220</y>
+        <width>531</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Enter/Browse text File</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_117">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>720</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Go Back</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_26">
      <attribute name="title">
       <string>Polybius Square</string>
      </attribute>
+     <widget class="QPushButton" name="pushButton_125">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>300</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Decrypt</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="textBrowser_29">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>250</y>
+        <width>651</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Encrypted/Decrypted message will appear here</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_126">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>700</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Go Back</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_97">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>60</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Message:</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_24">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>60</y>
+        <width>661</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Enter message to encrypt/decrypt</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_21">
+      <property name="geometry">
+       <rect>
+        <x>720</x>
+        <y>190</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>17</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>File</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_127">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>250</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Encrypt</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_98">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>190</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>File name:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_40">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>190</y>
+        <width>521</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Enter/Browse text File</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_99">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>480</y>
+        <width>781</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Use: &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;For encrypting strings, type strings in message box and  click on encrypt. To decrypt it, paste encrypted message in msg box and click on decrypt.&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;For encrypting text file, check on File option then browse the file and click on encrypt then save the encrypted file. To decrypt it, browse the encrypted file then click on decrypt and save the decrypted file. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_128">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>190</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>....</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_27">
      <attribute name="title">
       <string>Railfence</string>
      </attribute>
+     <widget class="QPushButton" name="pushButton_52">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>350</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Decrypt</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_87">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>60</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Message:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_91">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>190</y>
+        <width>51</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>MS Shell Dlg 2</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Key:</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_19">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>190</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>17</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>File</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_118">
+      <property name="geometry">
+       <rect>
+        <x>750</x>
+        <y>240</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>....</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_22">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>60</y>
+        <width>661</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Enter message to encrypt/decrypt</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_37">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>240</y>
+        <width>611</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Enter/Browse text File</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBox_6">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>190</y>
+        <width>161</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>25</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_92">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>240</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>File name:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_119">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>300</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Encrypt</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_120">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>690</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Go Back</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="textBrowser_27">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>300</y>
+        <width>651</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Encrypted/Decrypted message will appear here</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_93">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>480</y>
+        <width>781</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Use: &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;For encrypting strings, type strings in message box and select the number of keys then click on encrypt. To decrypt it, paste encrypted message in msg box and select the number of keys and click on decrypt.&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;For encrypting text file, check on File option then browse the file and select key, then click on encrypt then save the encrypted file. To decrypt it, browse the encrypted file and selec the key then click on decrypt and save the decrypted file. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_28">
      <attribute name="title">
       <string>Rot13</string>
      </attribute>
+     <widget class="QPushButton" name="pushButton_121">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>200</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>....</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="textBrowser_28">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>260</y>
+        <width>651</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Encrypted/Decrypted message will appear here</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_122">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>260</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Encrypt</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_123">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>310</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Decrypt</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_39">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>200</y>
+        <width>531</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Enter/Browse text File</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_20">
+      <property name="geometry">
+       <rect>
+        <x>730</x>
+        <y>200</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>17</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>File</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_94">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>70</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Message:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_124">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>700</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Go Back</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_23">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>70</y>
+        <width>661</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Enter message to encrypt/decrypt</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_95">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>200</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>File name:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_96">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>490</y>
+        <width>781</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Use: &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;For encrypting strings, type strings in message box and then click on encrypt. To decrypt it, paste encrypted message in msg box and click on decrypt.&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;For encrypting text file, check on File option then browse the file and then click on encrypt then save the encrypted file. To decrypt it, browse the encrypted file and then click on decrypt and save the decrypted file. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_29">
      <attribute name="title">
       <string>Simple Substitution</string>
      </attribute>
+     <widget class="QCheckBox" name="checkBox_14">
+      <property name="geometry">
+       <rect>
+        <x>730</x>
+        <y>220</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>17</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>File</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_98">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>280</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Encrypt</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_99">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>330</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Decrypt</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_100">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>680</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Go Back</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_71">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>220</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>File name:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_72">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>470</y>
+        <width>781</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Use: &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;For encrypting strings, type strings in message box and then click on encrypt. To decrypt it, paste encrypted message in msg box and click on decrypt.&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;For encrypting text file, check on File option then browse the file and then click on encrypt then save the encrypted file. To decrypt it, browse the encrypted file and then click on decrypt and save the decrypted file. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_17">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>50</y>
+        <width>661</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Enter message to encrypt/decrypt</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_73">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>50</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Message:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_29">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>220</y>
+        <width>531</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Enter/Browse text File</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="textBrowser_22">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>280</y>
+        <width>651</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Encrypted/Decrypted message will appear here</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_101">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>220</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>....</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_30">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>170</y>
+        <width>531</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="maxLength">
+       <number>26</number>
+      </property>
+      <property name="placeholderText">
+       <string>Enter Key 26 letter of alphabetical character</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_74">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>170</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Key:</string>
+      </property>
+     </widget>
     </widget>
    </widget>
    <widget class="QPushButton" name="pushButton_2">
