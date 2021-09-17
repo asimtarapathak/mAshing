@@ -81,4 +81,28 @@ Step 4: Now , we are all set. Run main.py file now using following command,
         python main.py
 ```
 
+## Screenshots
+
+### Home Tab
+![Home Tab](https://github.com/asimtarapathak/mAshing/blob/main/images/1.PNG "Home Tab")
+
+### Encoding and Decoding Tab
+![Encoding and Decoding Tab](https://github.com/asimtarapathak/mAshing/blob/main/images/2.PNG "Encoding and Decoding Tab")
+
+### Hash Checksum Tab
+![Hash Checksum Tab](https://github.com/asimtarapathak/mAshing/blob/main/images/3.PNG "Hash Checksum Tab")
+
+### Hashing and Hash Cracking Tab
+![Hashing and Hash Cracking Tab](https://github.com/asimtarapathak/mAshing/blob/main/images/4.PNG "Hashing and Hash Cracking Tab")
+
+### Password Manager Tab
+![Password Manager Tab](https://github.com/asimtarapathak/mAshing/blob/main/images/5.PNG "Password Manager Tab")
+
+### Secure Steganography Tab
+![Secure Steganography Tab](https://github.com/asimtarapathak/mAshing/blob/main/images/6.PNG "Secure Steganography Tab")
+
+### Cryptography Tab
+![Cryptography Tab](https://github.com/asimtarapathak/mAshing/blob/main/images/7.PNG "Cryptography Tab")
+
+
 Enjoy mAshing and you can give your feeback :)
