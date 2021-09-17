@@ -52,6 +52,12 @@
 | Sha3_512 | Sha384 | Sha3_384 | Whirlpool | Sha1 | DSA-SHA | DSA | Blake2b | DSA Encryption | Sha224 | Blake2s|
 |NTLM|
 
+## Ciphers:
+
+| ADFGX | ADFGVX | Affine | Autokey | Atbash | Beaufort | Bifid | Caesar |
+|---|---|---|---|---|---|---|---|
+| Columnar Transposition | Enigma M3 | Multiplicative | Gronsfeld | M-209 | Playfair | Polybius Square | Porta |
+| Railfence | Rot13 | Simple Substitution | Vigenere | Monoalphabetic Substitution |
 
 ## Download and Use mAshing:
 
