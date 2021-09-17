@@ -76,6 +76,7 @@ Step 3: If step 2 gives error then type following commands in cmd/terminal:
         pip install pyperclip
         pip install pyqt5
         pip install pyqt5-tools
+        pip install pycipher
 Step 4: Now , we are all set. Run main.py file now using following command,
         python main.py
 ```
